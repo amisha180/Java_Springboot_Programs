@@ -13,6 +13,7 @@ public class HashMap<K,V> {
     }
     public V put(K key,V value){
         int index = getIndex(key);
+        V prevValue=null;
         while (bucket[index]!=null && !bucket[index].key.equals(key)){
             index = (index+1)% bucket.length;
         }
@@ -20,7 +21,12 @@ public class HashMap<K,V> {
             bucket[index] = new HashNode<K,V>(key,value);
             size++;
         }
-       return bucket[index].value = value;
+        else{
+            prevValue = bucket[index].value;
+            bucket[index].value = value;
+        }
+
+        return prevValue;
     }
     public V get(K key){
         int index = getIndex(key);
