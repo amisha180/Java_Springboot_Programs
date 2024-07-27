@@ -1,7 +1,6 @@
-package Core_Java.PractiseJava;
+package Core_Java.DesignPattern;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Singleton implements Cloneable, Serializable {
     private static Singleton instance=null;

@@ -10,10 +10,10 @@ public class CustomException {
         }
     }
     public static void main(String[] args) {
-        int age = 19;
+        int age = 21;
         try {
             validToVote(age);
-        } catch (Exception e) {
+        } catch (AgeNotMatchedException e) {
             System.out.println(e.getMessage());
         }
 
