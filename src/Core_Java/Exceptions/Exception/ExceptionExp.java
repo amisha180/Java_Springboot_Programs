@@ -1,4 +1,4 @@
-package Core_Java.Exceptions;
+package Core_Java.Exceptions.Exception;
 
 public class ExceptionExp {
     public static int divide(int a ,int b) throws ArithmeticException{

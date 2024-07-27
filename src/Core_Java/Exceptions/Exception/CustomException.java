@@ -1,4 +1,4 @@
-package Core_Java.Exceptions;
+package Core_Java.Exceptions.Exception;
 
 public class CustomException {
     public static void validToVote(int age) throws AgeNotMatchedException{

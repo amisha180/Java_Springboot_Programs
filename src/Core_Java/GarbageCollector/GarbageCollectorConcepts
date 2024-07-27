@@ -1,0 +1,17 @@
+1. Can you force garbage collection in Java?
+
+Answer: No, you cannot force garbage collection. You can request it using System.gc(), but the JVM is free to
+ignore this request. The garbage collector runs at its own discretion based on the JVM's garbage collection
+algorithm and current memory usage.
+
+2. What is a memory leak in Java, and how does it occur?
+
+Answer: A memory leak in Java occurs when objects that are no longer needed by the application are not garbage
+collected because they are still reachable through references. This can happen if references to these objects
+ are held unintentionally, such as in static fields, long-lived collections, or circular references.
+
+3.What is the difference between minor and major garbage collection?
+
+ Answer: Minor Garbage Collection: Occurs in the Young Generation and is usually fast. It collects short-lived objects.
+ Major Garbage Collection (Full GC): Occurs in the Old Generation and is more comprehensive. It includes a
+ stop-the-world event and can be more time-consuming.
