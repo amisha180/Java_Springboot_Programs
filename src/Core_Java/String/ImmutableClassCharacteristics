@@ -1,0 +1,20 @@
+Characteristics of an Immutable Class
+
+1. Final Class: The class should be declared as final to prevent subclassing.
+2. Private Fields: All fields should be private to prevent direct access and modification.
+3. Final Fields: All fields should be declared as final so they can be assigned only once.
+4. No Setter Methods: Do not provide setter methods to prevent modification of fields.
+5. Initialization through Constructor: All fields should be initialized via a constructor.
+6. Defensive Copies: If the class has fields that refer to mutable objects, return copies of these objects instead of the originals.
+
+Note - Immutable objects are inherently thread-safe because their state cannot be changed after they are created.
+ This eliminates the need for synchronization, as multiple threads can access the object concurrently without any
+  risk of data corruption.
+
+Note- When an immutable class has a field that is a collection (e.g., List, Set), defensive copies of the collection
+ should be made to maintain immutability.
+  -private final List<String> hobbies;  :-
+  public ImmutablePerson(String name, List<String> hobbies) {
+      this.name = name;
+      this.hobbies = Collections.unmodifiableList(hobbies); // Defensive copy
+  }
