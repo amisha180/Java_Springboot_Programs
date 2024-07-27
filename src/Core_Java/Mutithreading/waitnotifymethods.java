@@ -1,4 +1,4 @@
-package Core_Java.mutithreading;
+package Core_Java.Mutithreading;
 
 public class waitnotifymethods {
     public static void main(String[] args) {

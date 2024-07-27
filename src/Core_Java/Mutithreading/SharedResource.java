@@ -1,4 +1,4 @@
-package Core_Java.mutithreading;
+package Core_Java.Mutithreading;
 
 public class SharedResource {
         private int data;
