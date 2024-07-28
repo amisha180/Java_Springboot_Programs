@@ -1,4 +1,4 @@
-package Core_Java.Collections.Sorting.Comparator;
+package Core_Java.Collections.Sort.Comparator;
 
 import java.util.Comparator;
 

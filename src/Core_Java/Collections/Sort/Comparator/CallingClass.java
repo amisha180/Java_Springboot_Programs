@@ -1,6 +1,4 @@
-package Core_Java.Collections.Sorting.Comparator;
-
-import Core_Java.Collections.Sorting.Comparable.Employee;
+package Core_Java.Collections.Sort.Comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;

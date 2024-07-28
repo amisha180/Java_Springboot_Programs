@@ -1,4 +1,4 @@
-package Core_Java.Collections.Sorting.Comparable;
+package Core_Java.Collections.Sort.Comparable;
 
 public class Employee implements Comparable<Employee> {
     int id;

@@ -1,0 +1,35 @@
+Tricky Interview Questions
+
+1. What is the difference between peek(), poll(), and remove() in a queue?
+
+peek(): Retrieves, but does not remove, the head of the queue, returning null if the queue is empty.
+poll(): Retrieves and removes the head of the queue, returning null if the queue is empty.
+remove(): Retrieves and removes the head of the queue, throwing an exception if the queue is empty.
+
+2.How does a PriorityQueue determine the order of elements?
+
+A PriorityQueue orders elements according to their natural ordering (i.e., the ordering imposed by the elements'
+compareTo method) or by a Comparator provided at queue construction time.
+
+3. Why is ArrayDeque usually preferred over LinkedList for queue implementations?
+
+ArrayDeque is usually preferred because it provides better performance for queue operations due to its resizable
+array-based implementation, which reduces the overhead of pointer manipulations present in LinkedList.
+
+4. Can you store null values in an ArrayDeque or PriorityQueue?
+
+No, both ArrayDeque and PriorityQueue do not permit null elements.
+
+5. What happens if you call remove() on an empty queue?
+
+Calling remove() on an empty queue throws a NoSuchElementException.
+
+6. How can you make a PriorityQueue thread-safe?
+
+To make a PriorityQueue thread-safe, you can use Collections.synchronizedQueue(new PriorityQueue<>()) or use a
+thread-safe alternative like PriorityBlockingQueue.
+
+Summary
+LinkedList: Implements Queue and Deque, allows null elements, not synchronized.
+PriorityQueue: Implements priority heap, orders elements by natural ordering or comparator, does not allow null elements, not synchronized.
+ArrayDeque: Implements Queue and Deque, provides better performance than LinkedList, does not allow null elements, not synchronized.

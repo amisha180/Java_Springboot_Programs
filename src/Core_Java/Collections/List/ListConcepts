@@ -1,0 +1,35 @@
+Tricky Interview Questions
+
+1. When would you use ArrayList over LinkedList?
+
+Use ArrayList when you need fast random access to elements and when you have more read operations than
+ insertions/deletions. ArrayList is also more memory efficient compared to LinkedList.
+
+2. When would you use LinkedList over ArrayList?
+
+Use LinkedList when you have frequent insertions and deletions, especially in the middle of the list, and when you
+don't need fast random access. LinkedList is more efficient in such scenarios due to its O(1) insertions and
+deletions.
+
+3. Why is Vector synchronized and ArrayList not?
+
+Vector was designed in early Java versions when thread safety was a primary concern. It is synchronized to ensure
+thread-safe operations. ArrayList was introduced later with the Collections Framework and is designed for
+non-synchronized use cases, offering better performance in single-threaded environments.
+
+4. How does ArrayList grow when more elements are added?
+
+ArrayList grows dynamically by resizing its internal array. When the array is full, it creates a new array with a
+larger capacity (typically 1.5 times the current size) and copies the old elements to the new array.
+
+5. What is the time complexity for searching an element in an ArrayList and a LinkedList?
+
+Searching in an ArrayList has a time complexity of O(n) in the worst case since it may need to traverse the entire
+ array. Searching in a LinkedList also has a time complexity of O(n) in the worst case, but it may perform worse
+ in practice due to cache locality and pointer chasing.
+
+Summary
+ArrayList: Fast random access (O(1)), slow insertions/deletions (O(n)), not synchronized.
+LinkedList: Fast insertions/deletions (O(1)), slow random access (O(n)), not synchronized.
+Vector: Similar to ArrayList but synchronized, making it thread-safe.
+Stack: Subclass of Vector, LIFO operations, synchronized.

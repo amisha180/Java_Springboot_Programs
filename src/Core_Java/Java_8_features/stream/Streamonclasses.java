@@ -1,6 +1,6 @@
 package Core_Java.Java_8_features.stream;
 
-import Core_Java.Collections.Sorting.Comparable.Employee;
+import Core_Java.Collections.Sort.Comparable.Employee;
 
 import java.util.*;
 import java.util.function.Function;

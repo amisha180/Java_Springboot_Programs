@@ -1,4 +1,4 @@
-package Core_Java.Collections.HashMap;
+package Core_Java.Collections.Map;
 
 public class HashMap<K,V> {
     private static final int CAPACITY = 16;

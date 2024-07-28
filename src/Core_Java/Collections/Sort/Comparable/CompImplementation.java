@@ -1,4 +1,4 @@
-package Core_Java.Collections.Sorting.Comparable;
+package Core_Java.Collections.Sort.Comparable;
 
 import java.util.ArrayList;
 import java.util.Collections;

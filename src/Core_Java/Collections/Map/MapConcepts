@@ -1,0 +1,78 @@
+Tricky Interview Questions
+
+1. What is the difference between HashMap and Hashtable?
+
+HashMap is not synchronized and allows one null key and multiple null values, whereas Hashtable is synchronized
+and does not allow any null keys or values.
+
+2. How does HashMap handle collisions?
+
+HashMap uses chaining to handle collisions. When two keys hash to the same index, their values are stored in a
+ linked list at that index. In Java 8 and later, when the number of items in a bucket exceeds a certain threshold,
+ the linked list is converted to a balanced tree to improve performance.
+
+3. When would you use a TreeMap over a HashMap?
+
+Use a TreeMap when you need the keys to be sorted in a natural order or by a custom comparator. HashMap does not
+ maintain any order of its elements.
+
+4. Why would you use a LinkedHashMap?
+
+LinkedHashMap is useful when you need to maintain the insertion order of elements or access order. This is
+particularly useful for implementing LRU (Least Recently Used) caches.
+
+5. What are the advantages of ConcurrentHashMap over Hashtable?
+
+ConcurrentHashMap allows concurrent read and write operations without locking the entire map, providing better
+performance in multi-threaded environments. It divides the map into segments and locks only the segment that is
+ being accessed, rather than the entire map.
+
+6. What is the time complexity for basic operations (get, put) in HashMap, LinkedHashMap, and TreeMap?
+
+HashMap and LinkedHashMap: O(1) on average for get and put operations.
+TreeMap: O(log n) for get and put operations due to the Red-Black tree structure.
+
+Summary
+HashMap: Fast get and put operations (O(1) average), allows null keys/values, not synchronized.
+LinkedHashMap: Maintains insertion/access order, allows null keys/values, not synchronized.
+TreeMap: Maintains sorted order, does not allow null keys, allows null values, not synchronized.
+Hashtable: Synchronized, does not allow null keys/values, generally replaced by ConcurrentHashMap.
+
+Tricky Interview Questions on HashMap
+1. What happens when two keys have the same hash code?
+
+When two keys have the same hash code, they will be placed in the same bucket (index in the array).
+A linked list (or tree from Java 8 onwards) is used to store multiple entries at the same index.
+ This is known as a collision.
+
+2. How does HashMap handle collisions?
+
+HashMap handles collisions using a linked list for each bucket. When the number of elements in a bucket exceeds a
+certain threshold (default is 8), the linked list is converted into a balanced tree (red-black tree) for better
+ performance.
+
+3. What is the load factor in a HashMap?
+
+The load factor is a measure of how full the HashMap can get before it needs to be resized (rehash). The default
+ load factor is 0.75, meaning the HashMap will resize when it is 75% full.
+
+4. What is rehashing, and when does it occur?
+
+Rehashing is the process of resizing the bucket array and redistributing the existing entries into the new buckets.
+It occurs when the number of entries exceeds the product of the current capacity and load factor.
+
+5. Can we store null keys and null values in HashMap?
+
+Yes, HashMap allows one null key and multiple null values. The null key is always stored in the first bucket(index 0).
+
+6. How does the get() method work in a HashMap?
+
+The get() method first computes the hash code of the key, transforms it into an index in the bucket array, and then
+ searches the corresponding bucket (linked list or tree) for the key. If found, it returns the associated value;
+  otherwise, it returns null.
+
+7. What improvements were made to HashMap in Java 8?
+
+In Java 8, the handling of collisions was improved by using a balanced tree (red-black tree) when the number
+of entries in a bucket exceeds a threshold (default is 8). This change improves the worst-case time complexity
+from O(n) to O(log n).

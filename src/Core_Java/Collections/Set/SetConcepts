@@ -1,0 +1,32 @@
+Tricky Interview Questions
+
+1. How does HashSet handle collisions?
+
+HashSet uses a hash table, and collisions are handled by chaining (using linked lists) or open addressing.
+In Java 8 and later, when the number of items in a bucket exceeds a certain threshold, the linked list is
+converted to a balanced tree to improve performance.
+
+2. Why would you use a LinkedHashSet over a HashSet?
+
+You would use a LinkedHashSet when you need to maintain the insertion order of elements.
+HashSet does not guarantee any specific order.
+
+3. How does TreeSet maintain its order?
+
+TreeSet maintains order using a red-black tree, which keeps elements sorted based on their natural ordering or a
+provided comparator. This ensures that operations like add, remove, and contains are performed in O(logn) time.
+
+4. Can you store null values in a TreeSet?
+
+No, TreeSet does not allow null values because it uses a comparator to sort elements, and comparing null to other
+elements will throw a NullPointerException.
+
+5. What is the time complexity for adding elements to a HashSet, LinkedHashSet, and TreeSet?
+
+HashSet: Average case O(1), worst case O(n) (due to resizing).
+LinkedHashSet: Average case O(1), worst case O(n) (due to resizing), with additional overhead for maintaining thelinked list.
+TreeSet: O(logn) due to the red-black tree.
+Summary
+HashSet: Fast insertion, deletion, and access (average O(1)), no order maintained.
+LinkedHashSet: Fast insertion, deletion, and access (average O(1)), maintains insertion order.
+TreeSet: Sorted order, insertion, deletion, and access in O(logn).
