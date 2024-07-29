@@ -1,0 +1,88 @@
+__Subquery__GroupBy__Row_NUMBER__
+
+1. How would you find the second highest salary in a table?
+
+-SELECT * FROM EMPLOYEE ORDER BY salary DESC  LIMIT 1 OFFSET 1;
+
+-SELECT max(salary) FROM EMPLOYEE where salary < (SELECT max(salary) FROM EMPLOYEE );
+==================================================================================================
+2. How do you retrieve the Nth highest salary in a table?
+
+-SELECT * from EMPLOYEE ORDER BY salary desc limit 1 offset N-1;
+
+-SELECT salary
+ FROM (
+     SELECT salary, ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_num
+     FROM employees
+ ) AS temp WHERE row_num = N;
+
+ //for 2nd highest salary for each department, (1st highest -> row_num=1)
+-select * from (select *, ROW_NUMBER() over (Partition by dept order by salary desc )
+as row_num FROM EMPLOYEE) as T where row_num=2;
+
+-select * from (select * , ROW_NUMBER() over (order by salary desc) as row_num from
+ EMPLOYEE) as T where row_num = 3;
+
+======================================================================================================
+3. How do you find the number of employees in each department?
+
+-select count(empId) , dept from EMPLOYEE group by dept ;
+=====================================================================================================
+4. Find Duplicates in a Table
+
+-SELECT email, COUNT(*)
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;
+
+=====================================================================================================
+5.  Delete Duplicate Rows
+
+-DELETE FROM users
+ WHERE id NOT IN (
+     SELECT MIN(id)
+     FROM users
+     GROUP BY email
+ );
+==========================================================================================================
+6. Get Employees With Same Salary
+
+-SELECT e1.*
+   FROM employees e1
+   JOIN employees e2 ON e1.salary = e2.salary AND e1.id != e2.id;
+===========================================================================================================
+7. Find the Maximum Salaries in Each Department
+
+-select * from (select *,ROW_NUMBER() OVER (PARTITION BY dept ORDER BY salary desc)  as row_num from
+ EMPLOYEE) as T where row_num=1;
+
+-select MAx(salary),dept from EMPLOYEE group by dept;
+===========================================================================================================
+8. Retrieve Employees Who Joined in the Last 30 Days
+-SELECT *
+ FROM employees
+ WHERE join_date >= DATEADD(DAY, -30, GETDATE());
+
+==============================================================================================================
+9. Top 2 Salaries in Each Department
+-select * from (select *,ROW_NUMBER() OVER (PARTITION BY dept ORDER BY salary desc)  as row_num from
+EMPLOYEE) as T where row_num<3;
+
+===============================================================================================================
+10. To classify employees based on their salary
+SELECT empId,
+       salary,
+       CASE
+           WHEN salary > 50000 THEN 'High'
+           WHEN salary BETWEEN 30000 AND 50000 THEN 'Medium'
+           ELSE 'Low'
+       END AS salary_level
+FROM employee;
+===============================================================================================================
+11. Find the Average Salary by Department, Including Departments with No Employees
+
+SELECT d.department_name, AVG(e.salary) AS avg_salary
+FROM departments d
+LEFT JOIN employees e ON d.department_id = e.department_id
+GROUP BY d.department_name;
+==============================================================================================================

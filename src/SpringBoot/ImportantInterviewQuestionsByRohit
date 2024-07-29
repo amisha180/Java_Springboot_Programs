@@ -1,0 +1,50 @@
+Below are the prep material.
+1. Detailed discussion on personal projects and company projects, which i have mentioned in the resume.
+2. Multithreading Concept and working/use of Synchronization.
+3. Caching mechanism(LRU CACHE) and how we can differentiate local cache and distributed cache.
+4. Discussion about google Map design and some more requirements to implement the architecture.
+5. why springBoot why not spring MVC , why we need to choose microservices over monolithic.
+6. What is Hibernate and its use in BE application.
+7. How JDBC works, how jdbcConnection and jdbcTemplate Differently works.
+8. Singleton Design pattern and how we can maintain synchronization in singleton for multiple threads.
+9. Strategy Design patten and how it we can implement for Google map application.
+
+10. Database Questions. SQL queries to retrieve the data based on Requirements.
+
+-> About the project details and architecture
+
+-> Stated with multithreading why it needed details
+
+-> Executor Framework and what kindly of thread pool I have used
+
+-> Future
+
+->Concurent hashMap
+
+->Java 8
+
+-> Lamda
+
+-> functional interfaces
+
+-> Streams
+
+-> Comparable and comparator
+
+-> Imuuatble class and how to make it including deep copy
+
+-> End-to-end working and structure of hashmap
+
+-> From hashmap create linked hashmap
+
+-> EntrySet in hashMap
+
+-> For tree data structure questions
+
+-> SQL , OrderBy group by aggregation inner queries
+
+- design the stock broker calculation service which is responsible to generate a report for every client of it
+ at end of the day
+
+Provide the design approach for the given service keeping in mind efficient DB
+Implement a product api for the same system
