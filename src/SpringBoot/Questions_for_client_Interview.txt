@@ -1,0 +1,44 @@
+1. Programming - Longest substring without repeating characters in a string, find repeating substrings in a string
+2. springboot autoconfiguration, how microservice starts up, 
+3. lambda, event driven architecture
+4. design a custom hashmap
+5. how to retrieve 100gb of data from db at once
+6. how to process 1 million records and store in db efficiently
+7. microservices - fault tolerance
+8. design patterns
+9. solid principles
+10. code review - what issues normally come up
+11. database design - what all to consider
+12. reactive programming
+13. streams related questions
+14. Java 8 lambda
+15. functional interface questions
+16. multiple payment options (credit card, debit card, upi) in front end, which design pattern to implement in the backend
+17. good coding practices
+18. spring security
+19. java reflection
+20. database index and views
+21. API Gateway
+22. Service discovery
+23. Load balancing - why and where
+24. Annotations in spring
+25. Spring batch - why and where
+26. Spring Security
+27. JPA - why and where
+28. Optimistic v/s pessimistic locks 
+29. Session management
+30. Transaction management across microservices
+31. HashMap vs Concurrent HashMap - why and where
+32. Caching
+33. Application context in Spring boot
+34. Java memory management for objects created
+35. Common mistakes done by developers due to which object will not get garbage collected in java.
+36. Coding question: Frequency of longest common sub-string in a given string.
+37. Sorting techniques
+38. mysql complex queries
+39. stream related question
+40. Stack queue creation and make one from another.
+select t.deptid ,t.salary, t.name ,department.name from (Select *, ROW_NUMBER() OVER(PARTITION BY deptid ORDER BY salary desc) as num_row
+ from employee) 
+t join department ON department.id = t.deptid
+where num_row=1

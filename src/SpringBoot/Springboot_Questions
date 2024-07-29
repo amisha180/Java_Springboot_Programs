@@ -1,0 +1,29 @@
+1. Spring MVC with example and tricky interview questions and programs
+2. Spring Data JPA with example and tricky interview questions and programs
+3. Hibernate with example and tricky interview questions and programs
+4. JDBC , What is the difference between Statement and PreparedStatement in JDBC?
+-Statement is used for executing static SQL queries. PreparedStatement is used for executing precompiled
+     SQL queries with parameters, providing better performance and security against SQL injection.
+
+5. Dependency injection in springboot with example and tricky interview questions and programs
+6. Spring MVC vs Spring Boot
+7. Circular Dependency - how to break
+-Here are different ways to handle circular dependencies:
+
+ Using @Lazy Annotation-    When ServiceA is being initialized, Spring injects a proxy instance of ServiceB
+                            because of the @Lazy annotation.This proxy instance will delegate calls to the actual ServiceB instance once
+                            it is fully initialized.
+
+ Setter Injection-  Spring first creates instances of ServiceA and ServiceB without injecting any dependencies.
+                    After the bean instances are created, Spring performs dependency injection through the
+                    setter methods.
+
+ Field Injection-   Similar to setter injection, Spring first creates the instances of ServiceA and ServiceB
+                    without injecting any dependencies.After the bean instances are created, Spring injects dependencies directly
+                    into the fields.This ensures that both beans exist before their dependencies are injected, thus breaking the
+                    circular dependency.
+ Using ObjectFactory or Provider - ServiceB can get an instance of ServiceA by calling
+                                   serviceAFactory.getObject().This lazy resolution of dependencies ensures that the actual instances are
+                                   created and injected only when needed, breaking the circular dependency.
+
+8. Annotations in springboot with example and tricky interview questions and programs

@@ -1,0 +1,105 @@
+Java Preperation
+-----------------
+OOPs concept:
+	class
+		static field
+		instance field
+		default constructor
+		constructor without parameter
+		constructor with parameter
+			overloading of the constructor
+			overriding of constructor
+		static method
+			why it can't be overriden
+			here overloading is possible
+		instance method
+			overloading of the method
+			overriding the method
+		static initialization block
+		instance initialization block
+		How to inherit from other class and interfaces?
+	interface ( How does it helps us in abstraction?)
+		functional interface
+			Function
+			Predicate
+			Consumer
+			Supplier
+		abstract method
+		static method
+		default method
+		diamond problem
+		how to inherit from other interfaces as can't inherit from a class?
+	abstract class (What is the use of it when we have class and interfaces?)
+	Object Class
+		hashCode
+		equals
+	String
+		String constant pool
+		Immutable class
+	StringBuilder
+		Builder design pattern
+	StringBuffer
+		Glimps of synchronization in Java
+	
+	
+Exception Handling:
+	Throwable
+		Error
+		Exception
+			RuntimeException
+	try
+	catch
+	finally
+	How to create custom checked and unchecked exception?
+	
+Comparable:
+	How to make a class comparable?
+	
+Comparator:
+	How to make custom comparator?
+	There are two abstract method in it and hence it is a functional interface why?
+	
+Collection: All CRUD operation's time complexity
+	Iterable
+	Collection
+		List
+			ArrayList
+				internal data structure
+			LinkedList
+				internal data structure
+			What is ConcurrentModificationException?
+			Fail safe and Fail fast iterator
+		Set
+			HashSet
+				internal data structure
+				LinkedHashSet
+					internal data structure
+			TreeSet
+				internal data structure
+		Sorting
+			When to use Comparable?
+			When to use Comaprator?
+			
+Map: All CRUD operation's time complexity
+	Entry ( an inner interface )
+		Can we sort the keys?
+		Can we sort the values?
+		When to use Comparable?
+		When to use Comaprator?
+	HashMap
+		internal implementation
+		contract between hashCode and equals method
+		How collision is resolved?
+		How to get the bucked index?
+		Why it is important to have immutable keys?
+		What if the hashcode value is always constant?
+		How put mehod works and it's time complexity?
+		How get mehod works and it's time complexity?
+		LinkedHashMap(How it is differnt from it's parent HashMap)
+			internal datastructure
+	TreeMap
+		internal implementation
+		Does it allow null key?
+		What is the requirement of a key(to be a part of TreeMap)?
+		How to pass a comparator to the TreeMap?
+			
