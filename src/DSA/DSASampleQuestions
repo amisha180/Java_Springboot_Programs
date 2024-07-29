@@ -1,0 +1,66 @@
+Final Round Sample Question
+Explain your current project and it working, uses etc.
+Java :
+1. What is Immutable concept in java
+2. What is private constructor, when to use it .
+3. Difference between String, StringBuffer and StringBuilder
+4. Muthreading, Synchronization concept
+5. Exception Handling, Try with Resource, Try catch and finally uses
+5. Collections framwork question and OOPs concept
+DS and Algorithms Topic and sample question.
+1. Sliding window
+Question : Longest Substring Without Repeating Characters
+2. Tree
+   Print all nodes at distance k from a given node
+
+3. Trie
+ Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+4. Grap/ DP
+Find minimum path max sum in a given matrix
+5. HashMap
+ group anagrams
+6. Two pointer technique
+7. Mathmathical Question
+8. Hashmap with keys as child node and value as parent node
+Need to return the root node with highest number of child node in it
+9.Find sub-string of minimum length with all distinct characters in it
+eg:
+Input string : "abbbccfbbaacfba"
+output : "cfbba".
+
+Please find the attached study material.
+Data structure and Algorithms-
+1. Basic Strings, Array and Mathematical based problems.
+2. Sliding window problems
+3. Problems solved using HashMap, Set and Stack.
+Java question:
+1. Collections Framework in-depth knowledge.
+2. Immutable concept in Java, creating own Immutable class with working code.
+3. Exception Handling all concepts like, try with resources etc.
+4. Create a Design pattern like Singleton etc. with working code.
+Please find the sample questions for the  coderpad round and share the solution:
+Question 1) Find the longest uniform substring (having all the characters as same) in the string. Return the initial index of substring and length of substring.
+Example:-
+Input    :-  aabbbbcde
+Output :-  [2,4]
+Explanation -
+Longest uniform substring - bbbb
+Initial Index - 2
+length of substring - 4
+Remarks :- It should be done using an approach of O(n) time complexity
+Question 2)   Given a 2D array of students and marks. Find the highest average marks among students.
+Example:-
+Input - [ [Shubham, 55], [Shivam, 68], [Shubham, 97], [RItika,97]]
+Output - 97
+Input - [ [Karan, 55], [Shivam, 68], [Karan, 97]]
+Output - 76 (Karan average mark is 76 which is greater than Shivam average marks 68)
+Question 3)  Given an array of unsorted integers and a value K. Find the minimum length of the subarray whose sum of elements is greater than or equal to K.
+Example:-
+Input   :-  arr = [1 2 3 5 8], K = 10
+Output :- 2.  length of subarray [5 8] whose sum is 13
+Remarks :- It should be done using an approach of O(n) time complexity
+Question 4) Print all prime factors for a given number
+Input 12 output 2 2 3
+Input 315 output 3 3 5 7
+5. Find first non-repeating character of given String
+6. Maximum path sum in matrix

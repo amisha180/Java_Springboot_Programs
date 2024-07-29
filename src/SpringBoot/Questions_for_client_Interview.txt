@@ -37,7 +37,8 @@
 37. Sorting techniques
 38. mysql complex queries
 39. stream related question
-40. Stack queue creation and make one from another.
+40. patterns like Rate Limiter, Retry, Bulkhead, and Time Limiter.
+41. Stack queue creation and make one from another.
 select t.deptid ,t.salary, t.name ,department.name from (Select *, ROW_NUMBER() OVER(PARTITION BY deptid ORDER BY salary desc) as num_row
  from employee) 
 t join department ON department.id = t.deptid
