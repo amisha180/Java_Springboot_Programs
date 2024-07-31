@@ -1,26 +1,98 @@
-CREATE TABLE EMPLOYEE (
-  empId INTEGER PRIMARY KEY,
-  name TEXT NOT NULL,
-  dept TEXT NOT NULL,
-  salary INT NOT NULL,
-  manager TEXT
+-- Table 1 ---
+-- create
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    DepartmentID INT,
+    Salary DECIMAL(10, 2)
 );
 
-CREATE TABLE DEPARTMENT (
-  deptID INTEGER PRIMARY KEY,
-  deptname TEXT NOT NULL
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50)
 );
+
 
 -- insert
-INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Sales',30000,"sahil");
-INSERT INTO EMPLOYEE VALUES (0002, 'Dave', 'Accounting',20000,"sashi");
-INSERT INTO EMPLOYEE VALUES (0003, 'baby', 'Accounting',50000,null);
-INSERT INTO EMPLOYEE VALUES (0006, 'bala', 'Sales',50000,null);
-INSERT INTO EMPLOYEE VALUES (0004, 'Ava', 'Sales',80000,null);
+INSERT INTO Departments (DepartmentID, DepartmentName) VALUES (1, 'HR');
+INSERT INTO Departments (DepartmentID, DepartmentName) VALUES (2, 'Engineering');
+INSERT INTO Departments (DepartmentID, DepartmentName) VALUES (3, 'Marketing');
 
-INSERT INTO DEPARTMENT VALUES (0001, 'Sales');
-INSERT INTO DEPARTMENT VALUES (0002, 'Accounting');
-INSERT INTO DEPARTMENT VALUES (0003, 'HR');
-INSERT INTO DEPARTMENT VALUES (0004, 'IT');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, DepartmentID, Salary) VALUES (1, 'John', 'Doe', 1, 60000);
+INSERT INTO Employees (EmployeeID, FirstName, LastName, DepartmentID, Salary) VALUES (2, 'Jane', 'Smith', 2, 80000);
+INSERT INTO Employees (EmployeeID, FirstName, LastName, DepartmentID, Salary) VALUES (3, 'Jim', 'Brown', 2, 75000);
+INSERT INTO Employees (EmployeeID, FirstName, LastName, DepartmentID, Salary) VALUES (4, 'Jake', 'White', 3, 50000);
 
-select * from Employee;
+
+CREATE VIEW EmployeeSummary AS
+SELECT
+    e.EmployeeID,
+    e.FirstName,
+    e.LastName,
+    d.DepartmentName,
+    e.Salary
+FROM
+    Employees e
+JOIN
+    Departments d ON e.DepartmentID = d.DepartmentID;
+
+
+SELECT * FROM EmployeeSummary;
+
+===================================================================================================================
+-- Table 2 --
+--create
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName VARCHAR(50),
+    ContactName VARCHAR(50),
+    Country VARCHAR(50)
+);
+
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(50),
+    Price DECIMAL(10, 2)
+);
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    ProductID INT,
+    OrderDate DATE,
+    Quantity INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- insert --
+INSERT INTO Customers (CustomerID, CustomerName, ContactName, Country) VALUES (1, 'Alfreds Futterkiste', 'Maria Anders', 'Germany');
+INSERT INTO Customers (CustomerID, CustomerName, ContactName, Country) VALUES (2, 'Centro comercial Moctezuma', 'Francisco Chang', 'Mexico');
+
+INSERT INTO Products (ProductID, ProductName, Price) VALUES (1, 'Chai', 18.00);
+INSERT INTO Products (ProductID, ProductName, Price) VALUES (2, 'Chang', 19.00);
+
+INSERT INTO Orders (OrderID, CustomerID, ProductID, OrderDate, Quantity) VALUES (1, 1, 1, '2024-01-01', 10);
+INSERT INTO Orders (OrderID, CustomerID, ProductID, OrderDate, Quantity) VALUES (2, 2, 2, '2024-01-02', 20);
+
+
+CREATE VIEW OrderSummary AS
+SELECT
+    o.OrderID,
+    c.CustomerName,
+    p.ProductName,
+    o.OrderDate,
+    o.Quantity,
+    (o.Quantity * p.Price) AS TotalPrice
+FROM
+    Orders o
+JOIN
+    Customers c ON o.CustomerID = c.CustomerID
+JOIN
+    Products p ON o.ProductID = p.ProductID;
+
+
+
+SELECT * FROM OrderSummary;
+

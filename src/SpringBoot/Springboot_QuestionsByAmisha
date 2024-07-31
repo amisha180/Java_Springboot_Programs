@@ -112,6 +112,21 @@ methods.
 21. Circuit Breaker with example
 22. service Discovery with examples
 
+// Interview 1
+Q1. how to instantiate a teacher class and student class if it has a dependency on one another using java
+springboot. How to overcome this circular dependency?
+Q2. Design Internal structure of HashMap.
+Q3. Have you used Garbage collector?
+Q4. Rate Limiter design - that creates connection if it has availabilty and release connection accordingly.
+
+// Interview 2
+Q1. Circular Dependency
+Q2. A prototype class A and you want to inject Singleton class B into A, then what will happen
+Q3. 2 threads are there- 1 will print all odd numbers and other will print all the even no -
+so how to print 1 2 3 4 5 6 7 8 9 10 in definite  order.
+
+
+
 
 
 
