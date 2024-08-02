@@ -1,0 +1,56 @@
+Introduction
+Project details:-
+Asked me to design classes of my project
+How you create order api and getOrderDetails Api
+Controller->Service->dao
+if you 2 entities i.e user and order
+
+user{
+userId;
+orderId;
+userType
+}
+
+order{
+orderId
+orderType
+cost
+}
+
+Getting all list<orders> then only get those orders where orderType = "SAAS" and ordercount = 5;
+Write SQL query to join 2 tables and get order details for particular user
+stream list of orders where top 5 cost of orders and quantity less than 100
+
+Animal(parent class)
+{
+   syso("Animal")
+}
+Cat(sub class)
+{
+   syso("Cat");
+}
+
+Animal a = new Cat();
+Filters and Interceptors
+Tell the o/p
+Binary tree question:- Vertical Order Traversal of a Binary Tree (leetcode 987)
+
+
+Interview 2:-
+
+Asked about the project
+[1,2,3,1,1,1,3,2]
+Print answer array by increasing frequency
+Deadlock situation -> How you will avoid
+custom annotations in springboot
+if one service is completed and other is failing how you will handle it using java
+
+Student Table
+Student    Subject      Marks
+S1          Maths        20
+S1           Eng         25
+S2          Maths        39
+S2          Science       45
+
+
+Get Subject with 2nd highest marks of each student
