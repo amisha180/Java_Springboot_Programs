@@ -17,3 +17,5 @@ import java.util.ArrayList;
             return new ArrayList<>(studentList); // Return a deep copy
         }
     }
+//create another class and use List<anotherclass> and use it as a deep copy
+//this is too simple

@@ -69,10 +69,10 @@ public class PrintOddEven {
 //countDown Latch
 //Semaphores
 //Barriers
-//Completable
-//future
+//CompletableFuture
 //Design threadpool
 //How to Take a thread dump
 //Create Deadlock and avoid it
 //Custom Annotations
 //mutex
+//LRU cache Implementation
