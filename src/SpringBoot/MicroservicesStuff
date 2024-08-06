@@ -1,0 +1,257 @@
+**SECURE MICROSERVICES
+---------------------
+-Implement API Gateway Security
+-Use Authentication and Authorization
+-Secure Service-to-Service Communication
+-Apply Fine-Grained Access Control(granting or denying access to specific resources based on the user's identity, role, and permissions.)
+-Enable Distributed Tracing and Logging
+
+
+**CIRCUIT BREAKER
+--------------------------
+The Circuit Breaker pattern in microservices acts as a safeguard against service failures by monitoring interactions, setting thresholds, and temporarily halting/Stoping traffic to failing services.(HIstrix,Resilience4)
+Importance of Circuit Breaker Pattern
+  1-Fault Isolation: It gives an opportunity for the relevant microservice to fail independently and not only because of another microservice failure.
+  2-Resilience: By reverting to tasks that have already been completed, the system ensures its resilience and keeps the standby function on maintaining its overall performance.
+  3-Prevents Overload: Essentially, it helps to prevent further adding to the load of ailing services that have an already existing problem, which may even into other systems part.
+  4-Graceful Degradation: What it doing is that it lets down the system orderly while the requests go to other services or to the default responses.
+  5-Fallback Mechanisms: Safeguards the operation of backup systems, which allows the services to stay on even when primary services are inhospitable.
+  6-Intelligent Error Handling: Introduced highly intelligent error handling schemes which increase the reliability and stability of a microservice-based application.
+
+**SOLID PRINCIPLES
+---------------------------
+1. Single Responsibility Principle (SRP) : One class, one job.
+2. Open/Closed Principle (OCP): Extend, don't modify.
+3. Liskov Substitution Principle (LSP): Subtypes must replace base types without issues.
+4. Interface Segregation Principle (ISP): Clients use what they need.
+5. Dependency Inversion Principle (DIP): Depend on abstractions, not on concretions.
+
+**DISTRIBUTED TRACING AND LOGGING
+------------------------------------------------------
+Distributed tracing : is a method of tracking application requests as they flow from frontend devices to backend services and databases.Select a tracing system like **OpenTelemetry, Jaeger, Zipkin, or Datadog**. These tools help collect and visualize traces.
+Code tracing,Program tracing,End-to-end tracing
+
+Logging is a practice of recording specific events that occur when an application runs. Logging tools collect timestamped events-such as system errors, user interactions, communication statuses, and other metrics-to help development teams detect system anomalies. Generally, there are two types of logging:
+	-Centralized logging collects all recorded activities and stores them in a single location.
+	-Distributed logging stores log files in separate locations on the cloud.
+
+
+**TRANSACTION IN MICROSERVICES
+-------------------------------------------------
+In the context of microservices, a transaction is defined as a sequence of operations across multiple services that must be completed successfully as a unit. Here's a more detailed breakdown:
+
+	- ATOMICITY: The transaction should either complete entirely or not at all. If any part of the transaction fails, all operations should be rolled back to maintain data integrity.
+
+	- CONSISTENCY: The system should transition from one consistent state to another. All services involved should reach a state where they agree on the outcome of the transaction.
+
+	- ISOLATION: The transaction should operate independently from other concurrent transactions. This ensures that transactions do not interfere with each other.
+
+	- DURABILITY: Once the transaction is committed, its results should be permanent and survive any subsequent failures or restarts.
+
+### In Microservices:
+
+	1. Distributed Transactions: Ensures that operations across multiple microservices either complete successfully together or roll back if any part fails. Techniques like ** Two-Phase Commit (2PC) ** are used but can be complex and impact performance.
+
+	2. ** SAGA Pattern **: Breaks down a large transaction into smaller, isolated operations that can be individually committed or rolled back. If a part of the saga fails, compensating transactions are used to undo previous operations.
+
+	3. Eventual Consistency: Accepts that different services might be temporarily inconsistent but will eventually converge to a consistent state through asynchronous communication and eventual reconciliation.
+
+**@SpringBootApplication
+---------------------------
+The `@SpringBootApplication` annotation in Spring Boot is a convenience annotation that combines three other annotations:
+
+1. **`@SpringBootConfiguration`**: This is a specialization of `@Configuration` that indicates that the class can be used by the Spring IoC container as a source of bean definitions. It serves as the configuration class for the Spring Boot application.
+
+2. **`@EnableAutoConfiguration`**: This annotation tells Spring Boot to start adding beans based on the classpath settings, other beans, and various property settings. It enables Spring Boot's auto-configuration mechanism, which automatically configures your Spring application based on the dependencies present on the classpath.
+
+3. **`@ComponentScan`**: This annotation tells Spring where to search for annotated components. By default, it scans the package where the `@SpringBootApplication` class is located and all its sub-packages. This allows Spring to discover and register components like `@Controller`, `@Service`, `@Repository`, etc.
+
+### Summary
+The `@SpringBootApplication` annotation is a composite annotation that includes:
+- `@SpringBootConfiguration`
+- `@EnableAutoConfiguration`
+- `@ComponentScan`
+
+Thus, `@SpringBootApplication` effectively combines these three annotations into a single, convenient annotation for setting up a Spring Boot application.
+
+**DIFFERENCE BETWEEN REST AND RESTFUL
+---------------------------------------------------------------------------------------------------------------------
+
+#- Definition
+  - **REST API**: Develops APIs to enable client-server interaction.
+  - **RESTful API**: Web application follows REST architecture, providing interoperability between different systems.
+
+#- Working
+  - `REST API`: Uses web services and is based on request and response.
+  - `RESTful` API**: Working is completely based on REST applications.
+
+#- Nature
+  - **REST API**: Highly adaptable and user-friendly.
+  - **RESTful API**: Too flexible.
+
+#- Protocol
+  - **REST API**: Strong protocol and is more secure, built-in architecture layers.
+  - **RESTful API**: Has a transport protocol, is less secure as compared to REST.
+
+#- Architecture
+  - **REST API**: Has a cacheable, client-server, stateless, layer system with a uniform interface.
+  - **RESTful API**: All features of REST architecture along with some additional unique features.
+
+- **Format of Data**
+  - **REST API: Format of data is based on HTTP.
+  - **RESTful API: Format of data is based on HTTP, text, and JSON.
+
+- **Bandwidth**
+  - REST API: This consumes minimum bandwidth.
+  - RESTful API: This consumes less bandwidth.
+
+- **Cache**
+  - **REST API**: Represents cacheable and non-cacheable data and displaces the non-cacheable data when not required.
+  - **RESTful API**: The client can access cacheable information anytime.
+
+
+**CONTROLLER AND REST CONTROLLER
+---------------------------------
+- **@Controller**:
+  - Marks classes as Spring MVC Controller.
+  - Specialized version of @Component annotation.
+  - Can return a view in Spring Web MVC.
+  - Indicates a class is a "controller" like a web controller.
+  - Needs @ResponseBody on every handler method.
+
+- **@RestController**:
+  - Combines @Controller and @ResponseBody for RESTful web services.
+  - Specialized version of @Controller annotation.
+  - Cannot return a view.
+  - Indicates a controller where @RequestMapping methods assume @ResponseBody by default.
+  - No need for @ResponseBody on every handler method.
+
+**Example of RestController**
+------------------------------
+package com.example.microservice.controller;
+
+import com.example.microservice.model.Item;
+import com.example.microservice.service.ItemService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/api/items")
+public class ItemController {
+    private final ItemService itemService;
+
+    public ItemController(ItemService itemService) {
+        this.itemService = itemService;
+    }
+
+    // Get all items
+    **@GetMapping
+    public List<Item> getAllItems() {
+        return itemService.getAllItems();
+    }
+
+    // Get item by ID
+    **@GetMapping("/{id}")
+    public Optional<Item> getItemById(@PathVariable Long id) {
+        return itemService.getItemById(id);
+    }
+
+    // Create a new item
+    **@PostMapping
+    public Item createItem(@RequestBody Item item) {
+        return itemService.createOrUpdateItem(item);
+    }
+
+    // Update an existing item
+   **@PutMapping("/{id}")
+    public Item updateItem(@PathVariable Long id, @RequestBody Item item) {
+        if (!id.equals(item.getId())) {
+            throw new IllegalArgumentException("Item ID in the path must match the ID in the request body.");
+        }
+        return itemService.createOrUpdateItem(item);
+    }
+
+    // Delete an item
+    **@DeleteMapping("/{id}")
+    public void deleteItem(@PathVariable Long id) {
+        itemService.deleteItem(id);
+    }
+}
+
+----------------------------------------------------------------------------
+**@PathVariable`, `@RequestParam`, and `@PathParam` (more common in JAX-RS)
+----------------------------------------------------------------------------
+
+### 1. `@PathVariable`
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Definition**: `@PathVariable` is used to extract values from the URI path of the request. It is typically used in RESTful web services where you need to capture a variable part of the URL.
+
+**Example**:
+
+```java
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<String> getUserById(@PathVariable("userId") String userId) {
+        // userId is extracted from the URL path
+        return ResponseEntity.ok("User ID: " + userId);
+    }
+}
+```
+
+**Request**: `GET /api/users/123`
+
+**Response**: `User ID: 123`
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 2. `@RequestParam`
+
+**Definition**: `@RequestParam` is used to extract query parameters from the URL. It is useful for handling parameters that are passed in the URL query string.
+
+**Example**:
+
+```java
+@RestController
+@RequestMapping("/api/products")
+public class ProductController {
+
+    @GetMapping
+    public ResponseEntity<String> getProduct(@RequestParam(name = "id", required = false) String id,
+                                              @RequestParam(name = "name", defaultValue = "defaultProduct") String name) {
+        // id and name are extracted from the query parameters
+        return ResponseEntity.ok("Product ID: " + id + ", Product Name: " + name);
+    }
+}
+```
+
+**Request**: `GET /api/products?id=456&name=Gadget`
+
+**Response**: `Product ID: 456, Product Name: Gadget`
+
+### 3. `@PathParam` (JAX-RS, not Spring)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Definition**: `@PathParam` is used in JAX-RS (Java API for RESTful Web Services) to extract values from the URI path of the request. It serves a similar purpose to `@PathVariable` in Spring but is used in a different context.
+
+**Example**:
+
+```java
+@Path("/api/users")
+public class UserResource {
+
+    @GET
+    @Path("/{userId}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getUserById(@PathParam("userId") String userId) {
+        // userId is extracted from the URL path
+        return "User ID: " + userId;
+    }
+}
+```
+
+**Request**: `GET /api/users/123`
+
+**Response**: `User ID: 123`
+--------------------------------------------------------------------------------------------------------------------------------------------------------------

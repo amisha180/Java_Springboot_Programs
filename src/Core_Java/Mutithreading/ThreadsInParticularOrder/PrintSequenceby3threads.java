@@ -1,6 +1,5 @@
-package Core_Java.Mutithreading;
+package Core_Java.Mutithreading.ThreadsInParticularOrder;
 
-import javax.print.attribute.standard.PrinterName;
 // 3 threads- 1 - 1stthread ,2-2nd thread,3rd Thread
 class PrintNum{
     private int counter=1;

@@ -1,4 +1,4 @@
-package Core_Java.Mutithreading;
+package Core_Java.Mutithreading.ThreadsInParticularOrder;
 class NumberPrinter {
     private int number = 1;
     private static final int MAX = 10;
@@ -64,15 +64,5 @@ public class PrintOddEven {
         evenThread.start();
     }
 }
-// 3 threads- 1 - 1stthread ,2-2nd thread,3rd Thread
-//Reentrant lock
-//countDown Latch
-//Semaphores
-//Barriers
-//CompletableFuture
-//Design threadpool
-//How to Take a thread dump
-//Create Deadlock and avoid it
-//Custom Annotations
-//mutex
-//LRU cache Implementation
+
+

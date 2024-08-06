@@ -1,0 +1,24 @@
+3 threads- 1 - 1stthread ,2-2nd thread,3rd Thread
+print odd even using 2 threads
+Reentrant lock
+countDown Latch
+Semaphores
+Barriers
+CompletableFuture
+Design threadpool
+How to Take a thread dump
+Create Deadlock and avoid it
+Custom Annotations
+mutex
+LRU cache Implementation
+
+Do all these in depth and Create thread pool without executor service
+circuit breaker
+two phase commit
+inside stream
+consumer , predicate , consumer chaining,bi consumer,supplier
+How to design stream
+hard questions on stream
+
+
+Note - Read evrything in depth and in detail
