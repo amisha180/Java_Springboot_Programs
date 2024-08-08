@@ -1,4 +1,4 @@
-package Core_Java.Mutithreading;
+package Core_Java.Mutithreading.DeadLock;
 
 public class DeadlockExample {
     private static final Object lock1 = new Object();

@@ -3,7 +3,7 @@ class Sum{
     private int counter=1;
     private int turn = 1;
     public void print(int threadId){
-        synchronized (this){
+        synchronized (this){ // Critical section starts here
             System.out.println(Thread.currentThread().getName()+" inside synchronized");
             while (counter<=10){
                 System.out.println(Thread.currentThread().getName()+" inside 1st while loop");
@@ -26,19 +26,14 @@ class Sum{
                     notifyAll();
                 }
             }
-        }
+        }// Critical section ends here
 
     }
 }
 public class ThreadImplementingRunnable {
     public static void main(String[] args) {
         Sum s = new Sum();
-        Thread t1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                s.print(1);
-            }
-        },"t1");
+        Thread t1 = new Thread(()->s.print(1),"t1");
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -52,7 +47,7 @@ public class ThreadImplementingRunnable {
             }
         },"t3");
 
-        t1.start(); //t1.run() will run like normal method by main thread
+        t1.start();
         t2.start();
         t3.start();
 

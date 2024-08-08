@@ -48,18 +48,8 @@ class DataQueue{
 public class ProducerConsumerExample {
     public static void main(String[] args) {
         DataQueue dq  = new DataQueue();
-       Thread producer = new Thread(new Runnable() {
-           @Override
-           public void run() {
-               dq.produce();
-           }
-       },"producer");
-       Thread consumer = new Thread(new Runnable() {
-           @Override
-           public void run() {
-               dq.consume();
-           }
-       },"consumer");
+       Thread producer = new Thread(()->dq.produce(),"producer");
+       Thread consumer = new Thread(()->dq.consume(),"consumer");
        producer.start();
        consumer.start();
 
