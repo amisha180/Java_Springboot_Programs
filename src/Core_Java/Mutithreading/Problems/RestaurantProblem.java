@@ -3,6 +3,7 @@ package Core_Java.Mutithreading.Problems;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 class Restaurant {
     private final Semaphore seats;
@@ -16,7 +17,7 @@ class Restaurant {
             seats.acquire();
             System.out.println(customerName + " has entered and seated.");
             // Simulate time spent in the restaurant
-            Thread.sleep((long) (Math.random() * 10000));
+            Thread.sleep(TimeUnit.SECONDS.toMillis(5));
             leaveRestaurant(customerName);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

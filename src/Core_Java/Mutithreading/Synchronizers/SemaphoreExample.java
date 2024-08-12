@@ -1,4 +1,4 @@
-package Core_Java.Mutithreading;
+package Core_Java.Mutithreading.Synchronizers;
 
 import java.util.concurrent.Semaphore;
 
