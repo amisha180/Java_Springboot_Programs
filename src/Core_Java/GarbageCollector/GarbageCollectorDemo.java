@@ -1,27 +1,26 @@
 package Core_Java.GarbageCollector;
 
 public class GarbageCollectorDemo {
-        public static void main(String[] args) {
-            // Creating objects
-            for (int i = 0; i < 100000; i++) {
-                new Object();
-            }
 
-            // Requesting garbage collection
+        public static void main(String[] args) {
+            // Create an object of the Example class
+            Example example = new Example();
+
+            // The object is no longer referenced
+            example = null;
+
+            // Suggesting the JVM to run the garbage collector
             System.gc();
 
-            // Adding a delay to allow GC to complete
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            System.out.println("Garbage collection completed.");
+            System.out.println("End of program");
         }
+    }
 
+    class Example {
+        // Destructor-like method (finalize) is called before an object is garbage collected
         @Override
         protected void finalize() throws Throwable {
-            System.out.println("An object is being garbage collected.");
+            System.out.println("Garbage collector is called, object is being garbage collected");
         }
-}
+    }
+

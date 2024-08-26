@@ -1,4 +1,4 @@
-package Core_Java.Mutithreading;
+package Core_Java.Mutithreading.CompletableFuture;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;

@@ -1,16 +1,16 @@
 Core Java
 1. Difference b/w keywords: final, finally & finalize
 2. How to explicitly stop execution of finally block
-3. Difference b/w: Object.equals() & String.equals()
-4. Object.equals() by default does reference comparison, how to do content comparison.?
+3. ##Difference b/w: Object.equals() & String.equals()
+4. ##Object.equals() by default does reference comparison, how to do content comparison.?
 5. Difference b/w: Exceptions & Errors
-6. Tell me about thread pool - how to use it
-7. Difference b/w: Identity hashmap & Weak hashmap
+6. ##Tell me about thread pool - how to use it
+7. ##Difference b/w: Identity hashmap & Weak hashmap
 
 Plain Text
 Spring Boot
-1. What is dispatcherServlet
-2. When you send objects in response, internally how are beans converted to JSON.?
+1. ##What is dispatcherServlet
+2. ##When you send objects in response, internally how are beans converted to JSON.?
 3. What is @ResponseBody
 4. Difference between @Controller & @RestController
 5. Difference between statefull & stateless REST API, and when do we use it

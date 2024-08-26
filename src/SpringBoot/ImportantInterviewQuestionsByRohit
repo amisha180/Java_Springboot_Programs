@@ -1,8 +1,8 @@
 Below are the prep material.
 1. Detailed discussion on personal projects and company projects, which i have mentioned in the resume.
 2. Multithreading Concept and working/use of Synchronization.
-3. Caching mechanism(LRU CACHE) and how we can differentiate local cache and distributed cache.
-4. Discussion about google Map design and some more requirements to implement the architecture.
+3. ##Caching mechanism(LRU CACHE) and how we can differentiate local cache and distributed cache.
+4. ##Discussion about google Map design and some more requirements to implement the architecture.
 5. why springBoot why not spring MVC , why we need to choose microservices over monolithic.
 6. What is Hibernate and its use in BE application.
 7. How JDBC works, how jdbcConnection and jdbcTemplate Differently works.
@@ -15,9 +15,9 @@ Below are the prep material.
 
 -> Stated with multithreading why it needed details
 
--> Executor Framework and what kindly of thread pool I have used
+-> ##Executor Framework and what kindly of thread pool I have used
 
--> Future
+-> ##Future
 
 ->Concurent hashMap
 
@@ -25,7 +25,7 @@ Below are the prep material.
 
 -> Lamda
 
--> functional interfaces
+-> ##functional interfaces
 
 -> Streams
 
@@ -37,7 +37,7 @@ Below are the prep material.
 
 -> From hashmap create linked hashmap
 
--> EntrySet in hashMap
+-> ##EntrySet in hashMap
 
 -> For tree data structure questions
 

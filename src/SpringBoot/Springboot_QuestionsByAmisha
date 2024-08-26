@@ -7,7 +7,7 @@
 
 5. Dependency injection in springboot with example and tricky interview questions and programs
 6. Spring MVC vs Spring Boot
-7. Circular Dependency - how to break
+7. ##Circular Dependency - how to break
 -Here are different ways to handle circular dependencies:
 
  Using @Lazy Annotation-    When ServiceA is being initialized, Spring injects a proxy instance of ServiceB
@@ -63,7 +63,7 @@ public Employee getEmployeeById(@RequestParam("id") Long id){
 employeeRepository.find(id);
 }
 
-13. ResponseEntity with examples
+13. ##ResponseEntity with examples
 -ResponseEntity in Spring Boot allows you to have full control over the HTTP response, including status codes,
 headers, and the body. This enables you to create more robust and informative APIs, which are crucial for
 client-server communication in RESTful services.you can return more detailed responses from your controller
@@ -107,8 +107,8 @@ methods.
 16. Exception handling in springBoot with examples - @ControllerAdvice , @ExceptionHandler
 17. Microservices vs Monolithic
 18. SOAP vs REST with examples
-19. How microservices communicate with examples and tricky questions
-20. How do microservices communicate using webclient with examples
+19. ##How microservices communicate with examples and tricky questions
+20. ##How do microservices communicate using webclient with examples
 21. Circuit Breaker with example
 22. service Discovery with examples
 
@@ -116,13 +116,13 @@ methods.
 Q1. how to instantiate a teacher class and student class if it has a dependency on one another using java
 springboot. How to overcome this circular dependency?
 Q2. Design Internal structure of HashMap.
-Q3. Have you used Garbage collector?
-Q4. Rate Limiter design - that creates connection if it has availabilty and release connection accordingly.
+Q3. ##Have you used Garbage collector?
+Q4. ##Rate Limiter design - that creates connection if it has availabilty and release connection accordingly.
 
 // Interview 2
 Q1. Circular Dependency
-Q2. A prototype class A and you want to inject Singleton class B into A, then what will happen
-Q3. 2 threads are there- 1 will print all odd numbers and other will print all the even no -
+Q2. ####A prototype class A and you want to inject Singleton class B into A, then what will happen
+Q3. ###2 threads are there- 1 will print all odd numbers and other will print all the even no -
 so how to print 1 2 3 4 5 6 7 8 9 10 in definite  order.
 
 

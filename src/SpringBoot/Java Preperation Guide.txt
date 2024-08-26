@@ -5,21 +5,21 @@ OOPs concept:
 		static field
 		instance field
 		default constructor
-		constructor without parameter
-		constructor with parameter
+		constructors without parameter
+		constructor with parameter:
 			overloading of the constructor
 			overriding of constructor
-		static method
+		static method:
 			why it can't be overriden
 			here overloading is possible
-		instance method
+		instance method:
 			overloading of the method
 			overriding the method
 		static initialization block
 		instance initialization block
 		How to inherit from other class and interfaces?
 	interface ( How does it helps us in abstraction?)
-		functional interface
+		##functional interface:
 			Function
 			Predicate
 			Consumer
@@ -27,18 +27,19 @@ OOPs concept:
 		abstract method
 		static method
 		default method
-		diamond problem
+		###diamond problem
+		##types of refernces
 		how to inherit from other interfaces as can't inherit from a class?
 	abstract class (What is the use of it when we have class and interfaces?)
-	Object Class
+	Object Class:
 		hashCode
 		equals
-	String
+	String:
 		String constant pool
 		Immutable class
-	StringBuilder
+	StringBuilder:
 		Builder design pattern
-	StringBuffer
+	StringBuffer:
 		Glimps of synchronization in Java
 	
 	
@@ -68,7 +69,7 @@ Collection: All CRUD operation's time complexity
 			LinkedList
 				internal data structure
 			What is ConcurrentModificationException?
-			Fail safe and Fail fast iterator
+			##Fail safe and Fail fast iterator
 		Set
 			HashSet
 				internal data structure
@@ -98,8 +99,8 @@ Map: All CRUD operation's time complexity
 		LinkedHashMap(How it is differnt from it's parent HashMap)
 			internal datastructure
 	TreeMap
-		internal implementation
+		##internal implementation
 		Does it allow null key?
-		What is the requirement of a key(to be a part of TreeMap)?
-		How to pass a comparator to the TreeMap?
+		##What is the requirement of a key(to be a part of TreeMap)?
+		##How to pass a comparator to the TreeMap?
 			

@@ -1,3 +1,76 @@
+1. Basics of Garbage Collection
+    What is garbage collection?
+    why finalize is deprecated in java 9 and what to use instead?
+    The need for garbage collection in memory management.
+    Manual vs. automatic garbage collection.
+2. Garbage Collection Algorithms
+    Mark-and-Sweep: How objects are marked and then swept away.
+    Reference Counting: How objects are collected based on their reference count.
+    Generational Garbage Collection: Different generations (young, old) and how GC works across them.
+    Copying Collection: Copying live objects to a new space and reclaiming old space.
+    Concurrent Mark and Sweep (CMS): Parallel and concurrent garbage collection.
+    G1 Garbage Collector: Introduction to the Garbage-First collector, how it works, and its benefits.
+    ZGC: The Z Garbage Collector for low-latency applications.
+    ByteBuffer - manual memory management
+    Shenandoah GC: Another low-latency GC available in the JVM.
+3. Garbage Collection Phases
+    Minor GC: Collection in the young generation.
+    Major GC: Collection in the old generation.
+    Full GC: Collecting across all generations.
+    Stop-the-World Events: Impact on application performance.
+4. Heap Structure
+    Overview of the heap memory layout.
+    Young Generation: Eden space, survivor spaces.
+    Old Generation: Long-lived objects.
+    Metaspace: Storage for class metadata.
+5. Tuning Garbage Collection
+    GC Parameters: Tuning the GC (e.g., heap size, young/old generation sizes).
+    GC Logs: Analyzing GC logs for performance tuning.
+    GC Performance Metrics: Latency vs. throughput.
+6. Garbage Collection in Java
+    Overview of Java's HotSpot JVM garbage collectors.
+    Choosing the right GC for different applications.
+    Java command-line options for tuning GC.
+7. Common GC Issues
+    Memory Leaks: Causes and how to detect them.
+    OutOfMemoryError: Causes, troubleshooting, and resolution.
+    GC Overhead: High GC pause times and how to minimize them.
+8. Advanced Topics
+    Concurrent vs. Parallel Garbage Collection: Differences and use cases.
+    GC for Real-Time Applications: Real-time GC strategies.
+    GC Internals: A deep dive into how JVM implements GC under the hood.
+9. Tools for GC Analysis
+    VisualVM: Monitoring and analyzing JVM performance, including GC activity.
+    JConsole: Real-time monitoring of Java applications.
+    GC Viewer: Tool for visualizing GC logs.
+10. Best Practices
+    Writing memory-efficient code.
+    Reducing object creation.
+    Using soft, weak, and phantom references appropriately.
+
+
+
+
+
+
+
+
+Differentiate between Heap vs Stack Memory in Java.
+What are the different parts of the heap?
+Differentiate between PermGen vs Metaspace.
+What is garbage collection?
+Which part of the memory is involved in Garbage Collection? Stack or Heap?
+How do you identify minor and major garbage collection in Java?
+What is the algorithm for garbage collection in Java?
+What is finalize() method in Java? When does Garbage collector calls finalize method in Java?
+What are the different ways to make an object eligible for Garbage Collection when it is no longer needed?
+What are different ways to call garbage collector?
+
+
+
+
+
+
 1. Can you force garbage collection in Java?
 
 Answer: No, you cannot force garbage collection. You can request it using System.gc(), but the JVM is free to

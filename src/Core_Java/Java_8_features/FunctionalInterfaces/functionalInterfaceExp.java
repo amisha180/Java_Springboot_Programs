@@ -1,4 +1,4 @@
-package Core_Java.Java_8_features;
+package Core_Java.Java_8_features.FunctionalInterfaces;
 interface Draw{
     void drawdiagram(int x);
 }

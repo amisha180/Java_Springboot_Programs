@@ -31,7 +31,7 @@ Cat(sub class)
 }
 
 Animal a = new Cat();
-Filters and Interceptors
+##Filters and Interceptors
 Tell the o/p
 Binary tree question:- Vertical Order Traversal of a Binary Tree (leetcode 987)
 
@@ -41,9 +41,9 @@ Interview 2:-
 Asked about the project
 [1,2,3,1,1,1,3,2]
 Print answer array by increasing frequency
-Deadlock situation -> How you will avoid
-custom annotations in springboot
-if one service is completed and other is failing how you will handle it using java
+##Deadlock situation -> How you will avoid
+##custom annotations in springboot
+##if one service is completed and other is failing how you will handle it using java
 
 Student Table
 Student    Subject      Marks
