@@ -9,7 +9,7 @@ class PrintNum{
     public void printn(int threadId){
         synchronized (this){
             while (counter<=maxSize){
-                while (turn!=threadId){
+                if (turn!=threadId){
                     try{
                         wait();
                     }

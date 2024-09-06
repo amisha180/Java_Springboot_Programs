@@ -53,12 +53,8 @@ public class PrintOddEven {
             }
         }, "OddThread");
 
-        Thread evenThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                numberPrinter.printEven();
-            }
-        }, "EvenThread");
+        Thread evenThread = new Thread(()-> numberPrinter.printEven(),"EvenThread");
+
 
         oddThread.start();
         evenThread.start();
