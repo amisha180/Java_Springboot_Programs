@@ -1,0 +1,10 @@
+1. Why did you choose MongoDB for the electric vehicle project, and SQL for the trading and
+ banking project?
+2. Can you explain how the microservices in the Athena Portal interacted with each other,
+and how Kafka was used in the trading project?
+3. What kind of testing did you implement for the microservices in the Athena Portal?
+4. Can you discuss a performance issue you encountered in either project and how you resolved it?
+clear consumer memory , lag were building up due to out of memory of consumer
+5. How did you handle real-time data processing in your trading project, and how does it compare to the
+Athena Portal?
+6. Can you describe a situation where a failure occurred in either project and how you handled it?

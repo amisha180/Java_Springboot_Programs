@@ -1,0 +1,101 @@
+Overview of the Tech Stack and Workflow
+In a trading and banking environment, the technologies and processes you described are used to manage and monitor large-scale data flows, ensuring the integrity, accuracy, and timeliness of trade-related data. Let's break down the components and their interactions with some examples.
+
+1. Refiners
+
+Purpose: Refiners are responsible for data transformation and preparation. They query a database based on a
+SQL query and filters, transform the data, and create a new table with the refined data.
+Example: Suppose you're working with trade data that includes raw transaction records from various financial
+instruments. A refiner could be configured to filter out irrelevant data, aggregate it by instrument type,
+and then calculate the average daily trading volume. The transformed data might be stored in a new table,
+ which is then used for further analysis or reporting.
+
+2. Kafka
+
+Purpose: Kafka is used as a messaging system to publish and consume data streams. Once a refiner has created
+the new table with the transformed data, this data is published to a Kafka topic.
+Example: After the refiner processes trade data, the aggregated daily volumes are published to a Kafka topic
+ called trade-aggregates. This allows downstream systems, such as risk management or compliance monitoring
+  services, to consume the data in real-time.
+
+3. Controls (Microservices)
+
+Purpose: Controls are microservices that consume data from Kafka topics to apply post-trade checks.
+These checks can include threshold breaches, documented anomalies, or other compliance-related validations.
+Example: A control microservice might consume data from the trade-aggregates Kafka topic and check if the
+ trading volume exceeds a certain threshold that could indicate suspicious activity. If a breach is detected,
+  the control could log this as a potential issue.
+
+4. Event Surveillance
+
+Purpose: Event Surveillance is an internal tool that helps create and configure controls (microservices).
+It allows you to define nodes, Kafka topics, consumers, and input/output mappings using Groovy scripts.
+Example: You might use Event Surveillance to set up a new control for monitoring trading volumes.
+You would specify the Kafka topic (e.g., trade-aggregates), configure the consumer to read from this topic,
+ and define the processing logic (e.g., checking thresholds) using Groovy scripts.
+
+5. Kibana
+
+Purpose: Kibana is used for visualizing data flows and monitoring the health of the system. It provides
+dashboards that display real-time information about the data being processed by various controls.
+Example: Kibana might display a dashboard showing the volume of trades processed by different controls,
+ the number of alerts generated, and any threshold breaches that have been detected.
+
+6. Alloy
+
+Purpose: Alloy is used for testing refiners. It ensures that the refiners are correctly querying, transforming,
+and publishing data before they are deployed into production.
+Example: Before deploying a new refiner that processes bond trades, you would use Alloy to test it against
+ historical data. Alloy would verify that the refiner correctly filters and transforms the data, ensuring that
+  the output matches expected results.
+
+7. Grafana
+
+Purpose: Grafana is used for monitoring the overall health of the system. It provides dashboards that aggregate
+ metrics from various sources, including Kafka, controls, and other microservices.
+Example: A Grafana dashboard might show the throughput of different Kafka topics, the number of active
+consumers, and the latency of data processing in various controls.
+
+8. Alerts and Exhub
+
+Purpose: Alerts are generated when issues are detected, such as threshold breaches or anomalies.
+ Exhub is used to raise exceptions and handle errors.
+Example: If a control detects that the trading volume for a particular instrument has exceeded a predefined
+threshold, it might generate an alert. This alert could trigger an exception in Exhub, which would then notify
+the relevant team to investigate.
+
+9. Example in a Trading and Banking Company
+
+Consider a scenario in a banking environment where you are responsible for monitoring trades in the foreign
+exchange (FX) market.
+
+Refiner Configuration:
+
+A refiner is set up to query the FX trade database every day, filtering out trades below a certain value and
+aggregating the data by currency pair.
+The refiner transforms this data into a new table that shows the total daily trading volume and average trade
+size for each currency pair.
+Data Flow via Kafka:
+
+The refined data is published to a Kafka topic called fx-trade-aggregates.
+Control Microservice:
+
+A control microservice consumes data from the fx-trade-aggregates topic. It checks if the daily trading volume
+ for any currency pair exceeds a risk threshold that might indicate market manipulation.
+If a threshold breach is detected, the control microservice generates an alert.
+Event Surveillance Configuration:
+
+Using Event Surveillance, you define a new control for monitoring the FX market. You specify the input as the
+ fx-trade-aggregates Kafka topic, and use a Groovy script to define the logic for checking volume thresholds.
+Monitoring with Kibana and Grafana:
+
+Kibana dashboards visualize the flow of data from the refiner to the control, showing any detected anomalies or
+breaches.
+Grafana dashboards provide an overview of system performance, including the number of trades processed and the
+ latency of data flow.
+Handling Alerts with Exhub:
+
+When a threshold breach is detected, Exhub raises an exception and sends notifications to the risk management
+team to investigate the potential issue.
+This setup ensures that the trading and banking company can monitor and respond to risks in real-time,
+ensuring compliance and minimizing financial exposure.

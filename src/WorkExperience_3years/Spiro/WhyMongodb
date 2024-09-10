@@ -1,0 +1,16 @@
+Vehicle Data Management: Suppose the Inventory Microservice needs to store detailed information about
+each vehicle, including technical specifications, rental history, service records, and customer reviews.
+MongoDB’s ability to store this complex, nested data structure in a single document allows for efficient
+data retrieval and updates, without the need for multiple tables and complex joins that a SQL database would
+require.
+
+Customer Profiles: The Lead Microservice might need to handle diverse customer data, including preferences,
+interaction history, and personalized recommendations. The flexible schema of MongoDB allows it to store this
+ varied data without needing to standardize it into a rigid structure, which is beneficial for tailoring the
+ customer experience.
+
+Conclusion:
+MongoDB is chosen in this project due to its flexibility, scalability, and performance benefits, which are
+particularly well-suited for the dynamic, data-intensive operations of the Athena Portal. Its ability to
+ handle complex and evolving data structures, coupled with its seamless integration with a microservices
+  architecture, makes it a preferred choice over traditional SQL databases in this scenario.

@@ -1,0 +1,216 @@
+1. Describe a challenging problem you faced in your recent projects and how you resolved it.
+
+Example Answer: "One of the biggest challenges I faced was optimizing the Kafka consumer in our Event
+ Surveillance system. We noticed that our consumers were running out of memory during peak loads.
+ To address this, I implemented backpressure by adjusting the max.poll.records configuration and optimized
+ our message processing logic to reduce memory usage. Additionally, I increased the heap size temporarily
+  and monitored the JVM to ensure stability. These changes significantly improved the system's performance
+  and prevented memory-related outages."
+
+
+2. Can you talk about a time when you had to meet a tight deadline? How did you manage it?
+
+Example Answer: "During the development of a critical feature in the Athena Portal, we had a tight deadline
+to integrate the Inventory and Lead microservices. I prioritized tasks, coordinated closely with team members,
+and used agile practices to break down the work into manageable sprints. We had daily stand-ups to track
+progress and address any blockers immediately. By staying focused and collaborating effectively, we
+successfully delivered the feature on time."
+
+
+3. Tell me about a milestone you achieved in your current or previous role.
+
+Example Answer: "A significant milestone was when we successfully rolled out the refined data processing
+ pipeline using refiners in our trading and banking project. I was responsible for configuring the YAML-based
+  refiners and ensuring they correctly queried the database, transformed the data, and published it to Kafka
+  topics. The successful deployment of this system enhanced data accuracy and improved the overall performance
+   of post-trade checks."
+
+
+4. How do you handle conflicts or disagreements within your team?
+
+Example Answer: "I believe in addressing conflicts early and openly. In one instance, there was a disagreement
+ between team members about the approach to implementing a feature. I facilitated a meeting where everyone
+ could express their views and concerns. We discussed the pros and cons of each approach and eventually
+ reached a consensus by focusing on the project's objectives. By fostering open communication and mutual
+  respect, we were able to resolve the conflict and move forward as a team."
+
+
+5. What was a time when you had to learn a new technology quickly? How did you manage?
+
+Example Answer: "When we decided to integrate Kibana dashboards for visualizing data flow in the Event
+Surveillance system, I had to quickly learn how to configure and use Kibana effectively. I managed by
+ dedicating time each day to study the documentation, experimenting with the tool in a test environment,
+  and attending webinars. Within a few weeks, I was able to set up the dashboards, which provided valuable
+  insights into our data processing and helped identify potential bottlenecks."
+
+
+6. Describe a time when you improved a process or system in your project.
+
+Example Answer: "I noticed that our testing process for refiners was time-consuming and prone to errors.
+ I proposed the use of Alloy for automated testing, which allowed us to run tests more efficiently and
+ consistently. I set up the test cases, trained the team on using Alloy, and integrated it into our CI/CD
+  pipeline. This improvement reduced testing time by 30% and significantly improved our deployment accuracy."
+
+
+7. How do you prioritize your tasks when working on multiple projects?
+
+Example Answer: "I use a combination of priority matrices and project management tools to organize my tasks.
+ I start by identifying the critical tasks that have the most significant impact on the project’s success.
+  I also consider deadlines, dependencies, and the complexity of each task. I break down larger tasks into
+   smaller, manageable parts and tackle them based on their urgency and importance. Regular check-ins with
+    my manager and team help ensure that I'm aligned with project goals and can adjust priorities if needed."
+
+
+8. Can you give an example of a time you made a mistake at work and how you handled it?
+
+Example Answer: "In one of my earlier projects, I missed an edge case in a SQL query that led to incorrect
+data being processed by the refiner. Once I realized the mistake, I immediately informed my team and took
+ responsibility. I quickly fixed the query, ran additional tests to ensure all cases were covered, and
+ implemented a more rigorous review process to prevent similar issues in the future. The experience taught
+  me the importance of thorough testing and double-checking my work."
+
+
+9. What has been your greatest achievement in your current role?
+
+Example Answer: "My greatest achievement was leading the migration of our data processing system to a
+more scalable architecture using Kafka and microservices. This involved redesigning our refiners, setting
+up new Kafka topics, and optimizing consumer performance. The migration resulted in a system that can handle
+ a much higher volume of data with improved reliability and easier maintenance."
+
+
+10. How do you stay current with new technologies and industry trends?
+
+Example Answer: "I make it a point to regularly attend webinars, read industry blogs, and participate in
+online courses. I’m also active in developer communities where I can exchange knowledge with peers.
+ Additionally, I work on side projects that allow me to experiment with new technologies and frameworks.
+  This continuous learning approach helps me stay updated and apply the latest best practices to my work."
+
+
+11. How did you ensure the quality of your code in your recent projects?
+
+Example Answer: "I adhere to coding best practices, such as writing clean and modular code, and I also make
+ use of static code analysis tools like SonarQube to detect potential issues early. In addition, I ensure
+ that my code is well-documented and write unit and integration tests to cover critical functionality. I
+  participate in code reviews to get feedback from peers, which helps maintain high code quality across
+  the team."
+
+
+12. Can you describe a situation where you had to collaborate with a cross-functional team?
+
+Example Answer: "In the Athena Portal project, I collaborated closely with the DevOps team to set up
+Jenkins pipelines for CI/CD. We worked together to automate the deployment process, including running
+ automated tests and monitoring the application post-deployment. This collaboration was crucial in
+ reducing manual deployment efforts and ensuring consistent, error-free deployments."
+
+
+13. How do you handle tight deadlines when unexpected issues arise?
+
+Example Answer: "When unexpected issues arise under tight deadlines, I first assess the impact of the
+ issue and determine if it needs immediate resolution or if it can be deferred. I then communicate with
+  the stakeholders to inform them of the situation and adjust the project plan if necessary. I prioritize
+   critical tasks, delegate responsibilities if possible, and focus on resolving the issue efficiently while
+    maintaining quality."
+
+
+14. Tell me about a time when you had to explain a complex technical concept to a non-technical stakeholder.
+
+Example Answer: "While working on the Event Surveillance system, I had to explain the benefits of using Kafka
+for data streaming to a non-technical stakeholder. I broke down the concept by comparing Kafka's message
+queuing system to a conveyor belt, where data items are placed on the belt and consumed by different
+processes. I highlighted how this approach improves data processing efficiency and scalability, using
+simple analogies to ensure they understood the value it brought to the project."
+
+
+15. What steps do you take to debug a complex issue in production?
+
+Example Answer: "When faced with a complex issue in production, I start by gathering as much information
+ as possible, including logs, error messages, and any recent changes to the system. I then try to reproduce
+  the issue in a test environment. Once I’ve identified the root cause, I develop a solution, test it
+  thoroughly, and apply the fix. After deployment, I monitor the system closely to ensure that the issue is
+  fully resolved and that there are no regressions."
+
+
+16. Have you ever had to take over a project midway through? How did you handle it?
+
+Example Answer: "Yes, I once had to take over a project when a colleague left unexpectedly. The project
+ involved configuring refiners for data transformation in our banking project. To get up to speed, I reviewed
+ all the existing documentation, analyzed the codebase, and had knowledge transfer sessions with the
+  outgoing colleague. I also communicated with the stakeholders to understand their expectations and adjusted
+  the project plan to accommodate any changes. This approach allowed me to successfully complete the
+  project without delays."
+
+
+17. What strategies do you use to manage stress during high-pressure situations?
+
+Example Answer: "During high-pressure situations, I stay focused by breaking down the tasks into smaller,
+ manageable pieces and tackling them one at a time. I prioritize my work, eliminate distractions, and
+ make sure to take short breaks to avoid burnout. I also practice deep breathing exercises to stay calm
+ and maintain clarity in decision-making. Additionally, I remind myself of past successes in overcoming
+ challenges, which boosts my confidence."
+
+
+18. Describe a time when you had to balance multiple competing priorities.
+
+Example Answer: "In my role at Wissen Technology, I often had to balance multiple competing priorities,
+such as developing new features for the Athena Portal while maintaining the existing infrastructure.
+To manage this, I would create a detailed task list and categorize each task by its urgency and importance.
+ I communicated regularly with stakeholders to ensure alignment on priorities, and I used project
+  management tools to track progress. By staying organized and transparent, I was able to deliver on
+  all fronts without compromising on quality."
+
+
+19. How do you approach continuous improvement in your work?
+
+Example Answer: "I regularly seek feedback from my peers and managers to identify areas for improvement.
+ I also keep myself updated with the latest industry trends and best practices through continuous learning.
+  After completing a project, I conduct a retrospective to reflect on what went well and what could be
+  improved. Based on these insights, I implement changes in my workflow or processes to enhance efficiency
+  and effectiveness."
+
+
+20. What was a significant change you implemented in a project, and what was the outcome?
+
+Example Answer: "In one of my projects, I proposed moving from a monolithic architecture to a
+microservices-based architecture for better scalability and maintainability. I worked on designing
+the microservices, setting up communication channels between them, and implementing the necessary
+infrastructure changes. The transition was smooth, and the outcome was a system that could handle
+increased load more effectively, with each service being independently deployable and maintainable."
+
+
+21. How do you ensure effective communication within your team, especially in remote or hybrid work
+environments?
+
+Example Answer: "To ensure effective communication in a remote work environment, I schedule regular
+ check-ins and virtual meetings to stay connected with my team. I use collaborative tools like Slack
+ for quick communication and Jira for tracking progress. I also make it a point to over-communicate
+ on important updates and encourage team members to share their thoughts and concerns openly. Clear
+ documentation and a well-structured communication plan help keep everyone on the same page."
+
+
+22. What do you do when you’re stuck on a problem and don’t know how to proceed?
+
+Example Answer: "When I’m stuck on a problem, I first try to break it down into smaller parts to
+ identify where I’m getting stuck. If I still can’t find a solution, I’ll reach out to colleagues
+ or mentors for their input. I also research the issue online, using forums, documentation, or relevant
+  resources to gain new perspectives. If time permits, I might take a short break to clear my mind before
+   revisiting the problem. This approach helps me approach the problem with fresh eyes and often leads to
+    a solution."
+
+
+23. Can you give an example of a time you proactively identified and addressed a potential risk in a project?
+
+Example Answer: "During the development of the Loanar microservice in the Athena Portal, I identified a
+potential risk related to the scalability of our MongoDB database due to the anticipated increase in data
+ volume. To mitigate this, I proposed and implemented sharding, which allowed the database to scale
+ horizontally as data grew. This proactive approach ensured that the system remained performant even
+ as the data volume increased."
+
+
+24. What’s the most important lesson you’ve learned from your work experience?
+
+Example Answer: "The most important lesson I’ve learned is the value of adaptability. Technology and
+project requirements are constantly evolving, and being able to quickly learn new skills, adapt to changes,
+ and approach problems with a flexible mindset is crucial. This adaptability has helped me successfully
+ navigate challenges and contribute effectively to my projects, regardless of the circumstances."
+
+ 

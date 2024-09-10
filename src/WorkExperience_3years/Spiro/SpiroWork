@@ -1,0 +1,105 @@
+Overview of the Electric Vehicle Company's System
+In this scenario, the electric vehicle company operates through the Athena Portal, a website that manages
+ vehicle sales and rentals. The portal is composed of multiple microservices, each responsible for a
+  specific aspect of the business. Here’s a detailed explanation of the system, along with an example:
+
+1. Inventory Microservice
+
+Purpose: Manages the stock of electric vehicles, including tracking available, sold, and rented vehicles.
+Example: The Inventory Microservice maintains a database of all vehicles, including details like model, color,
+availability status, and location. When a new vehicle arrives at the warehouse, the Inventory Microservice
+ updates its status as "available for sale or rent" on the Athena Portal.
+
+2. Lead Microservice
+
+Purpose: Handles customer inquiries, converting potential leads into sales or rental agreements.
+Example: When a customer visits the Athena Portal and expresses interest in a vehicle, the Lead Microservice
+captures the customer's details and preferences. If the customer is interested in a test drive,
+ the microservice schedules it and updates the lead status accordingly.
+
+3. Contract Microservice
+
+Purpose: Manages the creation, storage, and execution of sales or rental contracts.
+Example: After a customer decides to purchase or rent a vehicle, the Contract Microservice generates a
+digital contract. This contract includes terms and conditions, payment details, and the vehicle's VIN
+(Vehicle Identification Number). The microservice ensures that both parties can review and sign the contract
+electronically.
+
+4. Delivery Microservice
+
+Purpose: Oversees the logistics of delivering vehicles to customers after a purchase or rental agreement.
+Example: Once a contract is signed, the Delivery Microservice arranges for the vehicle to be delivered to the
+ customer’s location. It tracks the delivery status and provides real-time updates to the customer through
+ the Athena Portal.
+
+5. Pitstop Microservice
+
+Purpose: Manages maintenance and servicing of vehicles, whether for owned or rented vehicles.
+Example: If a customer reports an issue with their rented vehicle, the Pitstop Microservice schedules
+a maintenance check. It coordinates with the closest service center and keeps track of the vehicle’s
+service history.
+
+6. Repossession Microservice
+
+Purpose: Handles the repossession of vehicles in case of non-payment or breach of contract by customers.
+Example: If a customer defaults on their rental payments, the Repossession Microservice initiates the
+repossession process. It locates the vehicle using GPS, coordinates with the repossession team, and updates
+ the status in the inventory once the vehicle is recovered.
+
+7. Loanar Microservice
+
+Purpose: Manages loan agreements for customers purchasing vehicles through financing.
+Example: A customer decides to purchase a vehicle on a loan. The Loanar Microservice handles the loan
+ application process, including credit checks, approval workflows, and integration with the bank. Once
+  approved, the loan details are linked to the customer’s contract in the Contract Microservice.
+
+8. Tech Stack and Workflow
+The Athena Portal operates using a microservices architecture, with each microservice developed using Java
+ and Spring Boot. The company uses Git for version control, Jenkins for CI/CD pipelines, and MongoDB for
+ storing unstructured data like vehicle details, customer information, and contract documents. Linux is used
+ for running cron jobs, such as generating bills for rented vehicles.
+
+Example Scenario in the Company
+Let’s consider a scenario where a customer rents an electric vehicle through the Athena Portal:
+
+Customer Browsing:
+
+The customer visits the Athena Portal and uses the Inventory Microservice to browse available vehicles.
+They find a vehicle they like and submit a rental inquiry.
+Lead Conversion:
+
+The Lead Microservice captures the customer’s interest and begins the process of converting this lead into a
+rental agreement. The customer’s information is stored, and a sales representative follows up to finalize
+ the details.
+Contract Creation:
+
+After the customer agrees to the terms, the Contract Microservice generates a rental contract. The customer
+signs the contract electronically, and the system confirms the rental period, payment terms, and other
+ conditions.
+Vehicle Delivery:
+
+The Delivery Microservice takes over, arranging for the vehicle to be delivered to the customer’s address.
+The system tracks the vehicle’s location during transit and provides updates to the customer via the Athena
+Portal.
+Ongoing Maintenance:
+
+During the rental period, the Pitstop Microservice monitors the vehicle’s condition. If the vehicle requires
+maintenance, the customer can schedule a service through the Athena Portal, and the microservice ensures that
+ the vehicle is properly maintained.
+Billing and Payment:
+
+A cron job running on the Linux server generates monthly bills for the rental, based on the terms defined
+in the contract. The customer receives the bill via email and can make payments through the portal.
+Repossession (if needed):
+
+If the customer fails to make payments, the Repossession Microservice steps in. It locates the vehicle,
+coordinates with the repossession team, and updates the inventory once the vehicle is recovered.
+Loan Management (for Purchase):
+
+If the customer had opted to purchase the vehicle instead of renting, the Loanar Microservice would manage
+ the loan application process, integrating with financial institutions and ensuring the customer’s loan is
+ approved and linked to their purchase contract.
+This microservices-based architecture allows the company to scale its operations efficiently, handle complex
+business processes, and provide a seamless customer experience through the Athena Portal. Each microservice
+ focuses on a specific aspect of the business, ensuring that the system remains modular, flexible, and easy
+ to maintain.
