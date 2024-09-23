@@ -1,23 +1,23 @@
-SQL was chosen in your previous project due to its strengths in handling structured data, supporting
-complex queries and transactions, ensuring data integrity, and meeting regulatory compliance needs.
-These are all critical factors in the trading and banking sector, making SQL a more suitable choice than
+ SQL was chosen in your previous project due to its strengths in handling structured data, supporting
+ complex queries and transactions, ensuring data integrity, and meeting regulatory compliance needs.
+ These are all critical factors in the trading and banking sector, making SQL a more suitable choice than
  NoSQL databases for that particular use case.
 
  The trading and banking domain typically deals with highly structured and relational data. For example,
-  trade transactions, customer records, and financial data often have well-defined relationships and
-   require strict adherence to schemas. SQL databases are ideal for this kind of structured data as
-   they enforce data integrity and consistency through ACID (Atomicity, Consistency, Isolation, Durability)
-    properties.
+ trade transactions, customer records, and financial data often have well-defined relationships and
+ require strict adherence to schemas. SQL databases are ideal for this kind of structured data as
+ they enforce data integrity and consistency through ACID (Atomicity, Consistency, Isolation, Durability)
+ properties.
 
-The project involved complex post-trade checks, such as threshold breaches and documentation verification.
-SQL databases excel at handling complex queries involving multiple tables and relationships. For instance,
+ The project involved complex post-trade checks, such as threshold breaches and documentation verification.
+ SQL databases excel at handling complex queries involving multiple tables and relationships. For instance,
  you might need to join several tables to verify that all aspects of a trade comply with regulatory
  requirements, something that SQL can do efficiently with its powerful query language.
 
  The financial industry is heavily regulated, and SQL databases are often favored due to their ability to
  enforce complex constraints, maintain strict data integrity, and provide a reliable audit trail. This is
-  crucial for compliance with regulations like Basel III, MiFID II, or Dodd-Frank.
+ crucial for compliance with regulations like Basel III, MiFID II, or Dodd-Frank.
 
-  In your project, historical trade data would need to be stored, queried, and reported on regularly.
-  SQL databases are well-suited for handling large volumes of historical data with complex querying needs,
-  such as generating reports on trade activity over time, analyzing trends, or conducting audits.
+ In your project, historical trade data would need to be stored, queried, and reported on regularly.
+ SQL databases are well-suited for handling large volumes of historical data with complex querying needs,
+ such as generating reports on trade activity over time, analyzing trends, or conducting audits.
