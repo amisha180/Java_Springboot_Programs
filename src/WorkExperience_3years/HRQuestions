@@ -7,6 +7,9 @@ Example Answer: "One of the biggest challenges I faced was optimizing the Kafka 
   and monitored the JVM to ensure stability. These changes significantly improved the system's performance
   and prevented memory-related outages."
 
+//GS - learning GS tech stack as it was internal tools , not opensource.
+//Spiro - While implementing bulk upload feature , created batch related tables manually because automatically it
+was not getting created which was causing error.
 
 2. Can you talk about a time when you had to meet a tight deadline? How did you manage it?
 
@@ -16,6 +19,11 @@ and used agile practices to break down the work into manageable sprints. We had 
 progress and address any blockers immediately. By staying focused and collaborating effectively, we
 successfully delivered the feature on time."
 
+//GS - I was assigned 5-6 userstory per sprint , so deadlines were always tight over there , but I prioritized
+my tasks and if I am stuck or there is dependency for a particular userstory so I straight away start my next
+userstory.
+
+//Spiro - Eliminating 3rd party paygops and created new contract and lead microservices.
 
 3. Tell me about a milestone you achieved in your current or previous role.
 
@@ -25,6 +33,8 @@ Example Answer: "A significant milestone was when we successfully rolled out the
   topics. The successful deployment of this system enhanced data accuracy and improved the overall performance
    of post-trade checks."
 
+// GS - Successfully completed all the user stories assigned to me with.
+// Spiro - Eliminating 3rd party paygops and identifying cluster to be decommissioned.
 
 4. How do you handle conflicts or disagreements within your team?
 
@@ -34,6 +44,8 @@ Example Answer: "I believe in addressing conflicts early and openly. In one inst
  reached a consensus by focusing on the project's objectives. By fostering open communication and mutual
   respect, we were able to resolve the conflict and move forward as a team."
 
+//GS -
+//Spiro -
 
 5. What was a time when you had to learn a new technology quickly? How did you manage?
 
@@ -43,6 +55,8 @@ Surveillance system, I had to quickly learn how to configure and use Kibana effe
   and attending webinars. Within a few weeks, I was able to set up the dashboards, which provided valuable
   insights into our data processing and helped identify potential bottlenecks."
 
+//GS - confluence, Enghub articles, colleagues
+//Spiro - Online (Spring Batch)
 
 6. Describe a time when you improved a process or system in your project.
 
@@ -51,6 +65,8 @@ Example Answer: "I noticed that our testing process for refiners was time-consum
  consistently. I set up the test cases, trained the team on using Alloy, and integrated it into our CI/CD
   pipeline. This improvement reduced testing time by 30% and significantly improved our deployment accuracy."
 
+//GS - optimised query with windows function nd CTE.
+//Spiro - Lead and Contract.
 
 7. How do you prioritize your tasks when working on multiple projects?
 
@@ -69,6 +85,8 @@ data being processed by the refiner. Once I realized the mistake, I immediately 
  implemented a more rigorous review process to prevent similar issues in the future. The experience taught
   me the importance of thorough testing and double-checking my work."
 
+//GS - while creating refiners , wrong configuration - fixed it by logs.
+//Spiro - Handled duplicate and all other edge cases
 
 9. What has been your greatest achievement in your current role?
 
@@ -85,6 +103,7 @@ online courses. I’m also active in developer communities where I can exchange 
  Additionally, I work on side projects that allow me to experiment with new technologies and frameworks.
   This continuous learning approach helps me stay updated and apply the latest best practices to my work."
 
+// Blogs , videos , linkedin
 
 11. How did you ensure the quality of your code in your recent projects?
 
@@ -94,6 +113,8 @@ Example Answer: "I adhere to coding best practices, such as writing clean and mo
   participate in code reviews to get feedback from peers, which helps maintain high code quality across
   the team."
 
+//Proper testing
+//ACID , SOLID , DRY
 
 12. Can you describe a situation where you had to collaborate with a cross-functional team?
 
@@ -102,6 +123,7 @@ Jenkins pipelines for CI/CD. We worked together to automate the deployment proce
  automated tests and monitoring the application post-deployment. This collaboration was crucial in
  reducing manual deployment efforts and ensuring consistent, error-free deployments."
 
+//IOT Team
 
 13. How do you handle tight deadlines when unexpected issues arise?
 
@@ -162,10 +184,12 @@ To manage this, I would create a detailed task list and categorize each task by 
 19. How do you approach continuous improvement in your work?
 
 Example Answer: "I regularly seek feedback from my peers and managers to identify areas for improvement.
- I also keep myself updated with the latest industry trends and best practices through continuous learning.
-  After completing a project, I conduct a retrospective to reflect on what went well and what could be
-  improved. Based on these insights, I implement changes in my workflow or processes to enhance efficiency
-  and effectiveness."
+I also keep myself updated with the latest industry trends and best practices through continuous learning.
+After completing a project, I conduct a retrospective to reflect on what went well and what could be
+improved. Based on these insights, I implement changes in my workflow or processes to enhance efficiency
+and effectiveness."
+
+//Code Reviews
 
 
 20. What was a significant change you implemented in a project, and what was the outcome?
@@ -176,6 +200,7 @@ the microservices, setting up communication channels between them, and implement
 infrastructure changes. The transition was smooth, and the outcome was a system that could handle
 increased load more effectively, with each service being independently deployable and maintainable."
 
+//
 
 21. How do you ensure effective communication within your team, especially in remote or hybrid work
 environments?
@@ -204,6 +229,7 @@ potential risk related to the scalability of our MongoDB database due to the ant
  volume. To mitigate this, I proposed and implemented sharding, which allowed the database to scale
  horizontally as data grew. This proactive approach ensured that the system remained performant even
  as the data volume increased."
+
 
 
 24. What’s the most important lesson you’ve learned from your work experience?

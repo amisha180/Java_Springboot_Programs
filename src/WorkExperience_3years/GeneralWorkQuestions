@@ -4,7 +4,10 @@
 and how Kafka was used in the trading project?
 3. What kind of testing did you implement for the microservices in the Athena Portal?
 4. Can you discuss a performance issue you encountered in either project and how you resolved it?
+- memory full in server instance , so manually clear the memory. 90 M lag - consumer was down , due to memory full.
 clear consumer memory , lag were building up due to out of memory of consumer
 5. How did you handle real-time data processing in your trading project, and how does it compare to the
 Athena Portal?
 6. Can you describe a situation where a failure occurred in either project and how you handled it?
+Prod issue - someone from my team make an int value data as a string 1 day before release and it was prod
+issue that we identified after release with the logs and fixed it.
