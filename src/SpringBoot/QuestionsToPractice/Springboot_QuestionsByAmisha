@@ -4,8 +4,7 @@
 4. JDBC , What is the difference between Statement and PreparedStatement in JDBC?
 -Statement is used for executing static SQL queries. PreparedStatement is used for executing precompiled
      SQL queries with parameters, providing better performance and security against SQL injection.
-
-5. Dependency injection in springboot with example and tricky interview questions and programs
+5. Dependency injection in spring boot with example and tricky interview questions and programs
 6. Spring MVC vs Spring Boot
 7. ##Circular Dependency - how to break
 -Here are different ways to handle circular dependencies:
@@ -27,9 +26,9 @@
                                    serviceAFactory.getObject().This lazy resolution of dependencies ensures that the actual instances are
                                    created and injected only when needed, breaking the circular dependency.
 
-8. Annotations in springboot with example and tricky interview questions and programs
+8. Annotations in spring boot with example and tricky interview questions and programs
 9. SpringBoot starters
-10. How to use Actuator in spring Appilaction
+10. How to use Actuator in spring Application
 -/actuator/health: Shows the health status of the application.
  /actuator/info: Displays arbitrary application info.
  /actuator/metrics: Shows metrics information.
@@ -39,26 +38,26 @@
 
 11. cross origin
 12. HTTP Requests and Annotations
-@RequestMapping("/home"
+@RequestMapping("/home")
 
--@GetMapping("/getAllEmployees")
+-@GetMapping("/employees")
 public List<Employee> getAllEmployees(){
 employeeRepository.findAll();
 }
 
-@PostMapping("/createEmployee"){
+@PostMapping("/employees"){
 public void CreateEmployee(Employee employee){
 employeeRepository.save(employee);
 }
 
 //PathVariable - /users?id=1
--@GetMapping("/getEmployeeById/{id}")
+-@GetMapping("/employees/{id}")
 public Employee getEmployeeById(@Pathvariable("id") Long id){
 employeeRepository.find(id);
 }
 
-//RequestParam - /users/1
--@GetMapping("/getEmployeeById")
+//RequestParam - /users/id=1
+-@GetMapping("/employees")
 public Employee getEmployeeById(@RequestParam("id") Long id){
 employeeRepository.find(id);
 }
@@ -66,10 +65,10 @@ employeeRepository.find(id);
 13. ##ResponseEntity with examples
 -ResponseEntity in Spring Boot allows you to have full control over the HTTP response, including status codes,
 headers, and the body. This enables you to create more robust and informative APIs, which are crucial for
-client-server communication in RESTful services.you can return more detailed responses from your controller
+client-server communication in REST ful services.you can return more detailed responses from your controller
 methods.
 
-- @GetMapping("/{id}")
+- @GetMapping("employees/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id){
     Employee employee = employeeService.findEmployeeById(id);
     if(employee!=null){
@@ -78,13 +77,13 @@ methods.
     return new ResponseEntity<Employee>(HTTP_STATUS.NOT_FOUND);
     }
 
-- @PostMapping
+- @PostMapping("employees/)"
     public ResponseEntity<String> createUser(@RequestBody User user) {
         userService.createUser(user);
         return new ResponseEntity<>("User created successfully", HttpStatus.CREATED);
     }
 
-- @GetMapping("/headers/{id}")
+- @GetMapping("/users/{id}")
   public ResponseEntity<User> getUserWithHeaders(@PathVariable Long id) {
       User user = userService.getUserById(id);
       if (user != null) {

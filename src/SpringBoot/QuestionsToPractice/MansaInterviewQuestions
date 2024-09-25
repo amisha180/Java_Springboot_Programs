@@ -4,20 +4,17 @@ Core Java
 3. ##Difference b/w: Object.equals() & String.equals()
 4. ##Object.equals() by default does reference comparison, how to do content comparison.?
 5. Difference b/w: Exceptions & Errors
-6. ##Tell me about thread pool - how to use it
+6. pending- ##Tell me about thread pool - how to use it
 7. ##Difference b/w: Identity hashmap & Weak hashmap
 
-Plain Text
 Spring Boot
-1. ##What is dispatcherServlet
+1. ##What is dispatcherServlet - In Spring Boot (spring-boot-starter-web), DispatcherServlet is automatically configured, simplifying the setup.
 2. ##When you send objects in response, internally how are beans converted to JSON.?
 3. What is @ResponseBody
 4. Difference between @Controller & @RestController
-5. Difference between statefull & stateless REST API, and when do we use it
+5. Difference between stateful & stateless REST API, and when do we use it
 
-
-Plain Text
 Coding
-1. Given an array find the max sum can be obtained from a contiguous subarray
+1. Given an array find the max sum can be obtained from a contiguous sub array
 2. What if there are only negative numbers in the array
 3. What if it's a circular array

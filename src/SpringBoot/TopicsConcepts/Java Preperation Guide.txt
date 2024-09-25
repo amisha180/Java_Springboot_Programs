@@ -28,7 +28,7 @@ OOPs concept:
 		static method
 		default method
 		###diamond problem
-		##types of refernces
+		##types of references
 		how to inherit from other interfaces as can't inherit from a class?
 	abstract class (What is the use of it when we have class and interfaces?)
 	Object Class:
@@ -40,7 +40,7 @@ OOPs concept:
 	StringBuilder:
 		Builder design pattern
 	StringBuffer:
-		Glimps of synchronization in Java
+		Glimpse of synchronization in Java
 	
 	
 Exception Handling:
@@ -79,14 +79,14 @@ Collection: All CRUD operation's time complexity
 				internal data structure
 		Sorting
 			When to use Comparable?
-			When to use Comaprator?
+			When to use Comparator?
 			
 Map: All CRUD operation's time complexity
 	Entry ( an inner interface )
 		Can we sort the keys?
 		Can we sort the values?
 		When to use Comparable?
-		When to use Comaprator?
+		When to use Comparator?
 	HashMap
 		internal implementation
 		contract between hashCode and equals method
@@ -94,10 +94,10 @@ Map: All CRUD operation's time complexity
 		How to get the bucked index?
 		Why it is important to have immutable keys?
 		What if the hashcode value is always constant?
-		How put mehod works and it's time complexity?
-		How get mehod works and it's time complexity?
-		LinkedHashMap(How it is differnt from it's parent HashMap)
-			internal datastructure
+		How put method works and it's time complexity?
+		How get method works and it's time complexity?
+		LinkedHashMap(How it is different from it's parent HashMap)
+			internal datastructures
 	TreeMap
 		##internal implementation
 		Does it allow null key?

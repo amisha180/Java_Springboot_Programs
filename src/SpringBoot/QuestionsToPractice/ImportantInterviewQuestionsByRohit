@@ -15,15 +15,15 @@ Below are the prep material.
 
 -> Stated with multithreading why it needed details
 
--> ##Executor Framework and what kindly of thread pool I have used
+-> pending ##Executor Framework and what kindly of thread pool I have used
 
--> ##Future
+-> pending ##Future
 
-->Concurent hashMap
+->Concurrent hashMap
 
 ->Java 8
 
--> Lamda
+-> Lambda
 
 -> ##functional interfaces
 
@@ -31,7 +31,7 @@ Below are the prep material.
 
 -> Comparable and comparator
 
--> Imuuatble class and how to make it including deep copy
+-> Immutable class and how to make it including deep copy
 
 -> End-to-end working and structure of hashmap
 

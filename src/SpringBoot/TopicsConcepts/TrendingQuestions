@@ -1,11 +1,11 @@
-3 threads- 1 - 1stthread ,2-2nd thread,3rd Thread
+3 threads- 1 - 1st thread ,2-2nd thread,3rd Thread
 print odd even using 2 threads
 Reentrant lock
 countDown Latch
 Semaphores
 Barriers
 ##CompletableFuture
-Design threadpool
+Design thread pool
 How to Take a thread dump
 Create Deadlock and avoid it
 Custom Annotations
@@ -21,4 +21,4 @@ How to design stream
 hard questions on stream
 
 
-Note - Read evrything in depth and in detail
+Note - Read everything in depth and in detail
