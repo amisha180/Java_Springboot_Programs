@@ -1,3 +1,4 @@
+//Asked from Mansa in JPMC
 Core Java
 1. Difference b/w keywords: final, finally & finalize
 2. How to explicitly stop execution of finally block
@@ -18,3 +19,10 @@ Coding
 1. Given an array find the max sum can be obtained from a contiguous sub array
 2. What if there are only negative numbers in the array
 3. What if it's a circular array
+
+// Asked from me in Kotak Mahindra Bank
+1. How to debug and solve delay in response in one microservice
+2. How to ensure smooth integration and communication between microservices
+3. Internal structure of discovery server , which one you used.
+4. How to use a database in a microservice
+5. How to debug the microservices

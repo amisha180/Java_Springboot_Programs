@@ -5,9 +5,9 @@ public class Implementation {
         //	Animal a = new Animal(1,"pom");
 //	Cat c = new Cat(3,"lor");
 //	Dog d = new Dog();
-//	Cat c2 = new Animal();
-//	Dog d2 = new Animal();
-//	Animal ad = new Dog();
+//	Cat c2 = new Animal(); ////Down casting
+//	Dog d2 = new Animal(); //Down casting
+//	Animal ad = new Dog(); //Up casting
 
         Animals a = new Dogs(1,"pomo","black"); //upcasting
         if(a instanceof Dogs) {

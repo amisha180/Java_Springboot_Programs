@@ -13,3 +13,6 @@ public class StringBuilderProgram {
 		System.out.println(sb);
 	}
 }
+/*StringBuilder is designed for efficient string manipulation where multiple modifications
+ (append, insert, delete) are needed. Its internal char[] array allows for in-place modifications
+ without creating new objects.*/

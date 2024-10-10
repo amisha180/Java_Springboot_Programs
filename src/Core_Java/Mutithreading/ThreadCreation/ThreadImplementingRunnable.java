@@ -34,6 +34,7 @@ public class ThreadImplementingRunnable {
     public static void main(String[] args) {
         Sum s = new Sum();
         Thread t1 = new Thread(()->s.print(1),"t1");
+        Thread t4 = new Thread(()->s.print(2),"t4");
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -50,6 +51,7 @@ public class ThreadImplementingRunnable {
         t1.start();
         t2.start();
         t3.start();
+        t4.start();
 
     }
 }

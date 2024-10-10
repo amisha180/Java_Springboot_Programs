@@ -1,4 +1,4 @@
-package LearningAndDevelopmentProject;
+package DSA.LearningAndDevelopmentProject;
 import java.util.LinkedList;
 import java.util.HashSet;
 public class RemoveDuplicates {

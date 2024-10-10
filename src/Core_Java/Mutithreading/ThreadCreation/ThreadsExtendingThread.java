@@ -30,6 +30,7 @@ class mainTh{
         t1.start();
         Thread t2 = new Thread(()->th.print());
         Thread t3 = new Thread(()->th.print());
+        Thread t4 = new Thread(()->th.print());
 
         // run - It will run in main call stack and run like a normal method
       //  t1.start(); if again try to start a thread after starting once -  IllegalThreadStateException

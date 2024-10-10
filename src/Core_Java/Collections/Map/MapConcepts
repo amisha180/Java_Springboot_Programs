@@ -30,10 +30,11 @@ performance in multi-threaded environments. It divides the map into segments and
 6. What is the time complexity for basic operations (get, put) in HashMap, LinkedHashMap, and TreeMap?
 
 HashMap and LinkedHashMap: O(1) on average for get and put operations.
-TreeMap: O(log n) for get and put operations due to the Red-Black tree structure.
+TreeMap: O(log n) for get and put operations due to the Red-Black tree structure.//self balancing tree
 
 Summary
-HashMap: Fast get and put operations (O(1) average), allows null keys/values, not synchronized.
+HashMap: Fast get and put operations (O(1) average), allows 1 null key and multiple null values, not
+ synchronized.
 LinkedHashMap: Maintains insertion/access order, allows null keys/values, not synchronized.
 TreeMap: Maintains sorted order, does not allow null keys, allows null values, not synchronized.
 Hashtable: Synchronized, does not allow null keys/values, generally replaced by ConcurrentHashMap.
@@ -63,7 +64,8 @@ It occurs when the number of entries exceeds the product of the current capacity
 
 5. Can we store null keys and null values in HashMap?
 
-Yes, HashMap allows one null key and multiple null values. The null key is always stored in the first bucket(index 0).
+Yes, HashMap allows one null key and multiple null values. The null key is always stored in the first
+ bucket(index 0).
 
 6. How does the get() method work in a HashMap?
 

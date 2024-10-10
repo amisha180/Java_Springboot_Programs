@@ -24,7 +24,7 @@ public class MainImmutable {
         System.out.println(teacher.getList());
 
         // Attempt to modify the student list through the reference
-        list.add("rajesh");  //// Throws UnsupportedOperationException
+        //list.add("rajesh");  //// Throws UnsupportedOperationException
         System.out.println(teacher.getList());
 
     }

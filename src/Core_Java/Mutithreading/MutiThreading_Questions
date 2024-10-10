@@ -1,0 +1,6 @@
+1. How to create threads , which is preferred way?
+2. Callable vs Runnable?
+3. join , yield
+4. start instead of run?
+5. wait , notify - object method not Thread method
+6. Even Odd , 3 threads , producer consumer

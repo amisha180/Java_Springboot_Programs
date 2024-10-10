@@ -124,6 +124,26 @@ Q2. ####A prototype class A and you want to inject Singleton class B into A, the
 Q3. ###2 threads are there- 1 will print all odd numbers and other will print all the even no -
 so how to print 1 2 3 4 5 6 7 8 9 10 in definite  order.
 
+//MS client
+What is Callable and Runnable.
+How multi-threading environment work. How you make sure that you have managed good multi-threaded environment.
+   Callable and Runnable.
+How beans are initialized in Spring boot.
+Difference between Spring and Spring boot.
+Different scope of Spring bean. how can you change the scope and what will happen if you inject the prototype bean scope in Singleton scope.
+Real life project based scenario questions on modules which you have worked and questions around project.
+Eager and Lazy initialization of Spring bean.
+Types of Bean Injection and scenario based question on it and how will you use them if unit testing.
+How hashMap will behave if we make the hashcode method as a static method then how will get(), put() and remove() method of HashMap will behave.
+Internal Working of hashMap.
+Which data structure will i use if i want to have order sorted saved datasets. If you use them then how will you make sure that those datastructure is working proper for Object classes also. (Using comparable and Compartaor interface)
+How will you create Immutable class.
+Why Strings are Immutable.
+How many objects will be created in String s1 = new String("Rakesh") and how will you use intern() method for String pool.
+If you want to make any Object as Key in treeMap, treeSet. What all things you need to look and be aware of.
+What is equal and hashcode contract and what will happen if you don't implemenet one in some scenaios of Object creation.
+String str = "aabrbyzkrrb"; -> Count frequency of character. Tell me all possible ways to do it. Also if 2 character have same frequency then how will you optimizing find the one with lower ASCII values.
+
 
 
 

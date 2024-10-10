@@ -1,13 +1,14 @@
 Key Concepts
-Shallow Copy: The default implementation provided by the Object class's clone() method creates a shallow copy of
-the object. In a shallow copy, fields of primitive types are copied, but fields that are references to objects are
-not copied. Instead, the references to the objects are copied, so both the original and the clone refer to the same
-object.
+
+Shallow Copy: The default implementation provided by the Object class's clone() method creates a shallow copy
+of the object. In a shallow copy, fields of primitive types are copied, but fields that are references to objects are
+not copied. Instead, the references to the objects are copied, so both the original and the clone refer to the
+ same object.
 
 Deep Copy: In a deep copy, all objects are recursively copied, meaning that references to other objects are also
-copied, not just the references themselves. This is not provided by the default clone() method and must be implemented
- manually.
+copied, not just the references themselves. This is not provided by the default clone() method and must be
+implemented manually.
 
 Cloneable Interface: To enable an object to be cloned, the class must implement the Cloneable interface.
-This is a marker interface, meaning it does not contain any methods but signals to the clone() method that it is safe
- to clone instances of the class.
+This is a marker interface, meaning it does not contain any methods but signals to the clone() method that
+it is safe to clone instances of the class.

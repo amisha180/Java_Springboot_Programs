@@ -22,3 +22,11 @@ public class StringClass {
         System.out.println(z.compareTo(x));
     }
 }
+/*
+To make class Immutable -
+Steps - 1.Make class final
+        2.Make variables private and final
+        3.Initialize all the variables with constructor
+        4.No setter methods only getter methods
+        5.Deep copy of mutable objects.
+ */
